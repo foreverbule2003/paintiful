@@ -7,6 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= link_to "log in", new_user_session_path %>
+  <%= link_to "log out", destroy_user_session_path %>
+  <%= link_to "New", new_post_path %>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 

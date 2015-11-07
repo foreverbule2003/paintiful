@@ -1,15 +1,15 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: [:edit, :show, :update, :destroy]
+  before_action :find_post, only: [:edit, :show, :update, :destroy, :upvote]
   def index
     @posts= Post.all.order("created_at DESC")
   end
 
   def new
-    @post= Post.new
+    @post= current_user.posts.build
   end
 
   def create
-    @post= Post.new(post_params)
+    @post= current_user.posts.build(post_params)
     if @post.save
       redirect_to @post
     else
@@ -37,6 +37,11 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     redirect_to root_path
+  end
+
+  def upvote
+    @post.upvote_by current_user
+    redirect_to :back
   end
 
   private
