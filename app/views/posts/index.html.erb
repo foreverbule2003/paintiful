@@ -3,4 +3,5 @@
 
 <% @posts.each do |post| %>
   <h1><%= link_to post.title, post %></h1>
+  <%= link_to (image_tag post.image.url(:small)), post %>
 <% end %>
