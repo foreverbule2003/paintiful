@@ -1,0 +1,82 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+/*navbar*/
+.navbar-default{
+  background-color: lighten(#000, 65%);
+  border-radius: 1%;
+}
+.navbar-brand{
+  font-size: 30px;
+}
+.navbar-nav{
+  font-size: 20px;
+}
+.div#nav{
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.body{
+  background-color: lighten(#000, 75.7%);
+  max-width: 1920px;
+  max-height: 1080px;
+}
+/*posts#index*/
+.container-fluid#post.row{
+/*  float: auto;
+*/  
+  position: relative;
+  margin-left: 7%;
+  margin-right: 7%;
+
+}
+.div.row{
+background-color: red;
+}
+
+.div#post{
+  display: inline-block;
+  margin-top: 5%;
+/*  border-radius: 10%;
+*/
+
+/*  border: 5px;
+  border-style: solid;*/
+
+  resize: auto;
+  overflow: hidden;
+
+/*  box-shadow: 3px, 3px, 12px black;
+*//*  float:auto; #fix image position
+*/  
+/*border-radius: 10%;*/
+
+  max-width: 100%;
+}
+/*.img{
+  width: 100%;
+  height: 100%;
+}*/
+
+
+
+/*footer*/
+.footer{
+  text-align: center;
+
+  max-width: auto;
+}
+
+.conainer.fluid#show{
+
+  max-width: auto;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+
+

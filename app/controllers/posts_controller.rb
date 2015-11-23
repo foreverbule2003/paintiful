@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: [:edit, :show, :update, :destroy, :upvote]
+  before_action :find_post, only: [:edit, :show, :update, :destroy, :upvote, :myvote]
   def index
     @posts= Post.all.order("created_at DESC")
   end
@@ -19,7 +19,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    
+    @random_post = Post.where.not(id: @post).order("RANDOM()").first
   end
 
   def edit
@@ -43,6 +43,8 @@ class PostsController < ApplicationController
     @post.upvote_by current_user
     redirect_to :back
   end
+
+
 
   private
   def find_post

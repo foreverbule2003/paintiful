@@ -3,6 +3,10 @@ gem 'simple_form'
 gem 'devise'
 gem 'paperclip', '~> 4.3'
 gem 'acts_as_votable'
+gem 'bootstrap-sass', '~> 3.3.5'
+gem 'font-awesome-sass'
+gem 'haml'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
