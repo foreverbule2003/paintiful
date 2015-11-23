@@ -83,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: paintiful_production
+  database: paintiful_test
   username: paintiful
   password: <%= ENV['PAINTIFUL_DATABASE_PASSWORD'] %>

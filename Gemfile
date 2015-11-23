@@ -6,6 +6,8 @@ gem 'acts_as_votable'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'font-awesome-sass'
 gem 'haml'
+gem 'aws-sdk', '<2.0'
+gem 'figaro'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
