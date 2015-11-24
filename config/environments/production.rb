@@ -85,5 +85,5 @@ Rails.application.configure do
     }
   }
 
-  config.assets.prefix = "app/assets"
+  config.assets.prefix = "public/assets"
 end
