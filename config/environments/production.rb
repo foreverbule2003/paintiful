@@ -85,5 +85,5 @@ Rails.application.configure do
     }
   }
 
-  config.assets.prefix = "/shared/public/assets"
+  config.assets.prefix = "/current/app/assets"
 end
