@@ -57,6 +57,6 @@ Rails.application.configure do
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
-  config.assets.prefix = "/current/public/assets"
+  config.assets.prefix = "/public/current/public/assets"
   #config.assets.prefix = "/current/app/assets"
 end
