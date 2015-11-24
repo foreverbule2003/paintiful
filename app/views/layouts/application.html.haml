@@ -7,6 +7,21 @@
   = csrf_meta_tags
 %body.body
   =render 'common/navbar'
+  %nav.navbar.navbar-default
+  .container-fluid#nav
+    .navbar-header
+      = link_to "Paintiful", root_path, class: "navbar-brand"
+    .navbar-collapse-1.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        - if user_signed_in?
+          %li= link_to "", new_post_path ,class: "fa fa-pencil"
+          %li= link_to "", destroy_user_session_path, method: :delete, class: "glyphicon glyphicon-log-out"
+        - else
+          %li= link_to "", new_user_session_path,class: "pull-right", class: "glyphicon glyphicon-log-in"
+
+ 
+
+
   
   .alert-success= notice
   =yield
