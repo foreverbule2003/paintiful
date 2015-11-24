@@ -1,22 +1,24 @@
-.conainer.fluid#show
+.conainer#show
   .row
-    .col-lg-9
-      .div.well.img-responsive
+    .col-md-9
+      .div.img-responsive
         = image_tag @post.image.url(:medium)
+        %br
+      .col-md-12.col-offset-3    
         %h1= @post.title
         %h4= simple_format(@post.description ) 
 
-        .btn-group.btn-group-lg
+      .btn-group.btn-group-lg
+        .btn.btn-default
+          = link_to "Home", root_path
+        - if user_signed_in?
           .btn.btn-default
-            = link_to "home", root_path
-          - if user_signed_in?
-            .btn.btn-default
-              = link_to "Edit", edit_post_path(@post)
-            .btn.btn-default
-              = link_to "Delete", post_path(@post),method: :delete,data:{confirm: "Are you sure?"}
+            = link_to "Edit", edit_post_path(@post)
+          .btn.btn-default
+            = link_to "Delete", post_path(@post),method: :delete,data:{confirm: "Are you sure?"}
     
 
-    .col-lg-3
+    .col-md-3
       .div
         %h1 Maybe you also like:
         =link_to (image_tag @random_post.image.url(:small)), @random_post
