@@ -24,6 +24,7 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   #config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
   config.serve_static_files = false
+  #test underrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
   config.assets.compile = true
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -57,7 +58,7 @@ Rails.application.configure do
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
-  config.assets.prefix = "/public/assets"
+  config.assets.prefix = "/current/public/assets"
   #config.assets.prefix = "/public/current/public/assets"
   #config.assets.prefix = "/current/app/assets"
 end
