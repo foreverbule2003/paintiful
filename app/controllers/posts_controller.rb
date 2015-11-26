@@ -20,6 +20,7 @@ class PostsController < ApplicationController
 
   def show
     @random_post = Post.where.not(id: @post).order("RANDOM()").first
+    @other_random_post = Post.where.not(id: @post && @random_post).order("RANDOM()").first
   end
 
   def edit

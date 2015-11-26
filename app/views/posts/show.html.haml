@@ -3,10 +3,10 @@
     .col-md-9
       .div.img-responsive
         = image_tag @post.image.url(:medium)
-        %br
-      .col-md-12.col-offset-3    
+
+      .col-md-12.col-offset-3   
         %h1= @post.title
-        %h4= simple_format(@post.description ) 
+        = simple_format(@post.description) 
 
       .btn-group.btn-group-lg
         .btn.btn-default
@@ -21,8 +21,10 @@
     .col-md-3
       .div
         %h1 Maybe you also like:
-        =link_to (image_tag @random_post.image.url(:small)), @random_post
-      
+        #random_post
+          =link_to (image_tag @random_post.image.url(:small)), @random_post
+        #other_random_post  
+          =link_to (image_tag @other_random_post.image.url(:small)), @other_random_post
 
 
 
