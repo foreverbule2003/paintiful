@@ -3,6 +3,8 @@
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
 
 /*navbar*/
 .navbar-default{
@@ -15,6 +17,7 @@
 }
 .navbar-brand{
   font-size: 30px;
+  font-family: 'Lobster', cursive;
 }
 .navbar-nav{
   font-size: 20px;
@@ -49,26 +52,13 @@
 
 
 .div#post{
-
   margin-top: 10%;
-/*  border-radius: 10%;
-*/
-
-/*  border: 5px;
-  border-style: solid;*/
-
   resize: auto;
-/*  overflow: hidden;*/
-
-/*  box-shadow: 3px, 3px, 12px black;
-*//*  float:auto; #fix image position
-*/  
-/*border-radius: 10%;*/
-
-/*  max-width: 100%;*/
 }
 
-
+.alert-info{
+  font-size: 20px;
+}
 
 
 /*footer*/
@@ -83,6 +73,7 @@
 .conainer#show{
   max-width: auto;
   margin-left: 1.5%;
+
 
 }
 #other_random_post{
