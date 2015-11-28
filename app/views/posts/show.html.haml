@@ -5,8 +5,9 @@
         = image_tag @post.image.url(:medium), class: "image"
 
       .col-md-12.col-offset-3   
-        %h1= @post.title
-        = simple_format(@post.description) 
+        %h1.show_title
+          = @post.title#, class: "show_title"
+        = simple_format(@post.description)#, class: "show_description"
 
       .btn-group.btn-group-lg
         .btn.btn-default
