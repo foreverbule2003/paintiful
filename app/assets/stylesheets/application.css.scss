@@ -7,19 +7,13 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 
 
-
-
-
-
-
 /*navbar*/
 .navbar-default{
   background-color: lighten(#000, 65%);
   border-radius: 1%;
   padding-top: 0.5%;
   padding-bottom: 0.5%;
-  padding-left: 2%;
-  padding-right: 2%;
+
 }
 .navbar-brand{
   font-size: 40px;
@@ -28,11 +22,7 @@
 .navbar-nav{
   font-size: 20px;
 }
-.div#nav{
 
-
-
-}
 
 .body{
   background-color: lighten(#000, 75.7%);
@@ -42,26 +32,58 @@
 }
 
 /*posts#index*/
-
+.container-fluid{
+  margin-left: 5%;
+  margin-right: 5%;
+}
 .div#post{
-  margin-top: 10%;
+  margin-top: 15%;
   resize: auto;
 }
 .thumbnail{
-  width:100%;
-
+  width:99%;
+  margin-top: 5%;
+  border-radius: 3%;
 }
 .thumbnail:visited{
-  width:102%;
-
-}
+  -webkit-filter: drop-shadow(8px 8px 20px black);
+  filter: drop-shadow(8px 8px 20px black);
+/*  border-radius: 100%;
+*/}
 .thumbnail:hover{
-  width:102%;
+  -webkit-filter: drop-shadow(8px 8px 20px black);
+  filter: drop-shadow(8px 8px 10px black);
+/*  border-radius: 100%;
+*/}
+
+
+/*show*/
+.conainer#show{
+  max-width: auto;
+  margin-left: 3%;
+  margin-right: 3%;
+
+}
+#other_random_post{
+  margin-top: 10%;
 }
 
-
-
-
+.image{
+  width:100%;
+}
+.random_post{
+  width: 100%;
+}
+.random_post:visited{
+  -webkit-filter: drop-shadow(8px 8px 20px black);
+  filter: drop-shadow(8px 8px 20px black);
+/*  border-radius: 100%;
+*/}
+.random_post:hover{
+  -webkit-filter: drop-shadow(8px 8px 20px black);
+  filter: drop-shadow(8px 8px 10px black);
+/*  border-radius: 100%;
+*/}
 
 /*footer*/
 .div#footer{
@@ -73,14 +95,6 @@
   background-color: lighten(#000, 85.7%);
 }
 
-.conainer#show{
-  max-width: auto;
-  margin-left: 1.5%;
 
-
-}
-#other_random_post{
-  margin-top: 10%;
-}
 
 
