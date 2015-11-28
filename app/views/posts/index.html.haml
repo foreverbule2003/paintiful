@@ -4,7 +4,7 @@
   -#     .div#post
   -#       =link_to (image_tag post.image.url(:small)), post
 
-.container-fluid
+.container-fluid#index
   -@posts.each do |post|
     #post.col-md-3.box
       =link_to (image_tag post.image.url(:small), class: "thumbnail"), post, class: "thumbnail_wrap"

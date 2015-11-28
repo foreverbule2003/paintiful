@@ -10,10 +10,8 @@
 /*navbar*/
 .navbar-default{
   background-color: lighten(#000, 65%);
-  border-radius: 1%;
   padding-top: 0.5%;
   padding-bottom: 0.5%;
-
 }
 .navbar-brand{
   font-size: 40px;
@@ -32,16 +30,16 @@
 }
 
 /*posts#index*/
-.container-fluid{
-  margin-left: 5%;
-  margin-right: 5%;
+.container-fluid#index{
+  margin-left: 6%;
+  margin-right: 6%;
 }
 .div#post{
   margin-top: 15%;
   resize: auto;
 }
 .thumbnail{
-  width:99%;
+  width:100%;
   margin-top: 5%;
   border-radius: 3%;
 }
@@ -58,10 +56,10 @@
 
 
 /*show*/
-.conainer#show{
-  max-width: auto;
-  margin-left: 3%;
-  margin-right: 3%;
+.container-fluid#show{
+
+  margin-left: 8%;
+  margin-right: 8%;
 
 }
 #other_random_post{

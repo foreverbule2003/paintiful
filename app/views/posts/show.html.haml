@@ -1,4 +1,4 @@
-.conainer#show
+.container-fluid#show
   .row
     .col-md-9
       .div.img-responsive
@@ -20,7 +20,7 @@
 
     .col-md-3
       .div
-        %h1 Maybe you also like:
+        %h1 You might also like:
         #random_post
           =link_to (image_tag @random_post.image.url(:small), class: "random_post"), @random_post
         #other_random_post  
