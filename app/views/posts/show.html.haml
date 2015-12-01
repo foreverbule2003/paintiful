@@ -18,7 +18,7 @@
             = link_to "Edit", edit_post_path(@post)
           .btn.btn-default
             = link_to "Delete", post_path(@post),method: :delete,data:{confirm: "Are you sure?"}
-    
+      = render 'disqus'
 
     .col-md-3
       .div
@@ -27,6 +27,4 @@
           =link_to (image_tag @random_post.image.url(:small), class: "random_post"), @random_post
         #other_random_post  
           =link_to (image_tag @other_random_post.image.url(:small), class: "random_post"), @other_random_post
-
-
 
