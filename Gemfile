@@ -56,6 +56,5 @@ gem 'spring'
 gem 'pry-byebug'
 gem 'byebug', '~> 1.1.1'
 gem 'awesome_rails_console'
-gem 'byebug', '~> 1.1.1'
-gem 'awesome_rails_console'
+
 
