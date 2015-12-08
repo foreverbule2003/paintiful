@@ -7,6 +7,7 @@
       .col-md-12.col-offset-3   
         %h1.show_title
           = @post.title#, class: "show_title"
+          -# = @post.category.name
         .show_description
           = simple_format(@post.description)#, class: "show_description"
 
