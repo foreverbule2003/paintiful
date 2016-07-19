@@ -2,14 +2,12 @@ source 'https://rubygems.org'
 gem 'simple_form'
 gem 'devise'
 gem 'paperclip', '~> 4.3'
-gem 'acts_as_votable'
+# gem 'acts_as_votable'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'font-awesome-sass'
 gem 'haml'
 gem 'aws-sdk', '<2.0'
 gem 'figaro'
-
-
 gem 'puma'
 group :development do
   gem 'capistrano'
@@ -20,8 +18,8 @@ group :development do
 end
 
 gem 'redactor-rails', github: "kausters/redactor-rails"
-gem "carrierwave"
-gem "mini_magick"
+# gem "carrierwave"
+# gem "mini_magick"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -44,9 +42,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
-
-
 
 # Access an IRB console on exception pages or by using <%= console %> in views
 gem 'web-console', '~> 2.0'

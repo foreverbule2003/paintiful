@@ -43,7 +43,7 @@ class PostsController < ApplicationController
 
   def like
     @post.do_like
-    redirect_to @post
+    redirect_to :back
   end
 
 
