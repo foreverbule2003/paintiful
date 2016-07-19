@@ -8,6 +8,8 @@
         %h1.show_title
           = @post.title#, class: "show_title"
           = link_to "Like", like_post_path(@post), method: :get, class: "navbar-brand"
+        %i.fa.fa-eye 
+          =@post.counter
         %i.fa.fa-heart
           =@post.like
           -# = @post.category.name

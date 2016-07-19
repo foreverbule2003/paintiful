@@ -43,9 +43,9 @@ class PostsController < ApplicationController
   end
 
   def like
-    @post.like += 1
-    @post.save
-    # self.update_columns(is_admin: false)
+    # @post.like += 1
+    # @post.save
+    @post.do_like
     redirect_to @post
   end
 
