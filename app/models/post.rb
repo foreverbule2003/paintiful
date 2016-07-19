@@ -10,4 +10,20 @@ class Post < ActiveRecord::Base
     @post.counter -= 1
     @post.save
   end
+
+  def do_view
+    self.counter += 1
+    self.save
+    # counter = @post.counter + 1
+    # @post.update_columns(counter: counter)
+  end
+
+  def random_post
+    Post.where.not(id: self).order("RANDOM()").first
+    # @random_post = Post.where.not(id: @post).order("RANDOM()").first
+    # @other_random_post = Post.where.not(id: @post && @random_post).order("RANDOM()").first
+  end
+  def other_random_post(random_post)
+    Post.where.not(id: self && random_post).order("RANDOM()").first
+  end
 end

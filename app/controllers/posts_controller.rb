@@ -19,10 +19,9 @@ class PostsController < ApplicationController
   end
 
   def show
-    @random_post = Post.where.not(id: @post).order("RANDOM()").first
-    @other_random_post = Post.where.not(id: @post && @random_post).order("RANDOM()").first
-    counter = @post.counter + 1
-    @post.update_columns(counter: counter)
+    @random_post = @post.random_post
+    @other_random_post = @post.other_random_post(@random_post)
+    @post.do_view
   end
 
   def edit
@@ -43,8 +42,6 @@ class PostsController < ApplicationController
   end
 
   def like
-    # @post.like += 1
-    # @post.save
     @post.do_like
     redirect_to @post
   end
