@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: [:edit, :show, :update, :destroy, :upvote, :myvote]
+  before_action :find_post, only: [:edit, :show, :update, :destroy, :like, :myvote]
   def index
     @posts= Post.all.order("created_at DESC")
   end
@@ -42,16 +42,17 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
-  def upvote
-    @post.upvote_by current_user
-    redirect_to :back
+  def like
+    @post.like += 1
+    @post.save
+    # self.update_columns(is_admin: false)
+    redirect_to @post
   end
-
 
 
   private
   def find_post
-    @post=Post.find(params[:id])  
+    @post = Post.find(params[:id])  
   end
 
   def post_params
