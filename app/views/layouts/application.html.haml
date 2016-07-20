@@ -9,13 +9,10 @@
 
 %body.body
   =render 'common/navbar'
-
   .alert-info
     = notice
-  .container  
-    =render 'common/nav_category'
+  =render 'common/nav_category'
   =yield
-
   =render 'common/footer'
   
 

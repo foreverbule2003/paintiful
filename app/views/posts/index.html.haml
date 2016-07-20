@@ -4,8 +4,11 @@
       =link_to (image_tag post.image.url(:small), class: "thumbnail"), post, class: "thumbnail_wrap"
       -# =render 'common/nav_category'
       -# =render 'common/like'
+      %hr/
       %i.fa.fa-eye 
-        =post.counter      
+        =post.counter 
+      %i.fa
+             
       %i.fa.fa-heart
         =post.like
       = link_to like_post_path(post), method: :get, class: "btn btn-danger pull-right" do 
