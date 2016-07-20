@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       get 'like', to: 'posts#like'
     end
   end
-  
+  resources :categorys
   root 'posts#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
