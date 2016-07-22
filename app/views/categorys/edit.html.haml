@@ -9,4 +9,6 @@
             .form-actions
               = f.button :submit, input_html: {class: "form-control"}
 
+.btn.btn-default
+  = link_to "Delete", category_path(@category),method: :delete,data:{confirm: "Are you sure?"}
 

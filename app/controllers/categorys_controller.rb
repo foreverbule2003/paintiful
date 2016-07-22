@@ -1,5 +1,5 @@
 class CategorysController < ApplicationController
-  before_action :find_category, only: [:show, :edit, :update]
+  before_action :find_category, only: [:show, :edit, :update, :destroy]
   def index
     @categorys = Category.all.order("id")
   end
@@ -27,6 +27,12 @@ class CategorysController < ApplicationController
       render :edit
     end 
   end
+
+  def destroy
+    @category.destroy
+    redirect_to :root
+  end
+
 
   private
   def find_category
