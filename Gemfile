@@ -20,7 +20,7 @@ group :development do
 end
 
 gem 'redactor-rails', github: "kausters/redactor-rails"
-# gem "carrierwave"
+gem "carrierwave"
 # gem "mini_magick"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
