@@ -11,10 +11,29 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
+//= require masonry/jquery.masonry
+//= require masonry/jquery.event-drag
+//= require masonry/jquery.imagesloaded.min
+//= require masonry/jquery.infinitescroll.min
+//= require masonry/modernizr-transitions
+//= require imagesloaded
 //= require turbolinks
+//= require bootstrap/alert
 //= require_tree .
 
-//= require jquery
-//= require bootstrap-sprockets
-//= require bootstrap/alert
+// jQuery(document).ready(
+//   $(function(){
+//     $('#masonry-container').masonry({
+//       itemSelector: '.post',
+//     });
+//   });
+// }
+$(document).ready(function () {
+  $(function(){
+    $('#masonry-container').masonry({
+      itemSelector: '.post',
+    });
+  });
+});

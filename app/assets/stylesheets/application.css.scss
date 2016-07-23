@@ -6,7 +6,6 @@
 @import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 
-
 a:hover{
   text-decoration: none;
 
@@ -18,7 +17,17 @@ a:hover{
   padding-left: 3%;
 }
 
-
+#posts{
+  margin: 0 auto;
+  width: 100%;
+  .box {
+    margin: 10px;
+    width: 350px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+    border-radius: 7px;
+    text-align: center;
+  }
+}
 /*navbar*/
 .navbar-default{
   background-color: lighten(#000, 65%);
@@ -42,15 +51,15 @@ a:hover{
 }
 
 /*posts#index*/
-.container-fluid#index{
+/* .container-fluid#index{
   margin-left: 6%;
   margin-right: 6%;
   margin-top: 3%;
-}
-.div#post{
-  /* margin-top: 15%; */
+} */
+/* .div#post{
+  margin-top: 15%;
   resize: auto;
-}
+} */
 
 .thumbnail:visited{
   -webkit-filter: drop-shadow(8px 8px 20px black);
@@ -62,14 +71,14 @@ a:hover{
   filter: drop-shadow(8px 8px 10px black);
 /*  border-radius: 100%;
 */}
-.show_title{
+/* .show_title{
   font-family: 'cwtexyen';
   font-size: 500%;
 }
 .show_description{
   font-family: 'cwtexyen';
   font-size: 300%;
-}
+} */
 
 /*show*/
 .container-fluid#show{

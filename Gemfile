@@ -12,6 +12,8 @@ gem 'redactor-rails', github: "kausters/redactor-rails"
 gem 'rails', '4.2.0'
 
 #Styling
+gem 'imagesLoaded_rails'
+gem 'masonry-rails', '~> 0.2.1'
 gem 'font-awesome-sass'
 gem 'haml'
 gem 'bootstrap-sass', '~> 3.3.5'
