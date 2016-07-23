@@ -1,7 +1,7 @@
 -# #masonry-container.transitions-enabled.infinite-scroll.clearfix#index
 #masonry-container.transitions-enabled.infinite-scroll.clearfix
   -@posts.each do |post|
-    .col-md-3.col-sm-6.post
+    .col-md-3.post
       .thumbnail
         =link_to (image_tag post.image.url(:small)), post
         %hr/

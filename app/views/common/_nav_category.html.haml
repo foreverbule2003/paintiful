@@ -1,4 +1,8 @@
-.container-fluid#nav_category
+.container#nav_category
   -Category.all.order("id").each do |category|
-    #post.col-md-3
-      =link_to category.name, category_path(category), class: "form-control"
+    %ul.pull-right.nav.nav-tabs
+      %li=link_to category.name, category_path(category)
+
+    -# , class: btn btn-primary btn-lg "
+    -# "panel panel-info" 
+    -# "label label-success"

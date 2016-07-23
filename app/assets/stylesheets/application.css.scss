@@ -6,9 +6,12 @@
 @import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 
+.body{
+  background-color: lighten(#000, 75.7%);
+}
 a:hover{
   text-decoration: none;
-
+  text-align: center;
 }
 
 .fa{
@@ -16,18 +19,19 @@ a:hover{
   padding-bottom: 8%;
   padding-left: 3%;
 }
-
-#posts{
-  margin: 0 auto;
-  width: 100%;
-  .box {
-    margin: 10px;
-    width: 350px;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
-    border-radius: 7px;
-    text-align: center;
-  }
+.image{
+  max-width:100%;
 }
+
+#masonry-container {
+  border-radius: 5px;
+  clear: both;
+}
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
 /*navbar*/
 .navbar-default{
   background-color: lighten(#000, 65%);
@@ -42,10 +46,16 @@ a:hover{
   font-size: 20px;
 }
 
+/*nav_category*/
+.container#nav_category{
+  margin-bottom: 2rem;
+  width: 100%;
 
-.body{
-  background-color: lighten(#000, 75.7%);
 }
+
+
+
+
 .alert-info{
   font-size: 2rem;
 }
@@ -69,8 +79,7 @@ a:hover{
 .thumbnail:hover{
   -webkit-filter: drop-shadow(8px 8px 20px black);
   filter: drop-shadow(8px 8px 10px black);
-/*  border-radius: 100%;
-*/}
+}
 /* .show_title{
   font-family: 'cwtexyen';
   font-size: 500%;
@@ -92,9 +101,7 @@ a:hover{
   margin-top: 10%;
 }
 
-.image{
-  width:100%;
-}
+
 .random_post{
   width: 100%;
 }

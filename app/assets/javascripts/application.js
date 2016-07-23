@@ -23,17 +23,12 @@
 //= require bootstrap/alert
 //= require_tree .
 
-// jQuery(document).ready(
-//   $(function(){
-//     $('#masonry-container').masonry({
-//       itemSelector: '.post',
-//     });
-//   });
-// }
-$(document).ready(function () {
-  $(function(){
-    $('#masonry-container').masonry({
-      itemSelector: '.post',
+$(document).ready(function () {//window load finish
+  setTimeout(function () {//sleep 0.5s till post loaded finish than call masonry 
+    $(function(){
+      $('#masonry-container').masonry({
+        itemSelector: '.post'
+      });
     });
-  });
-});
+  }, 500)//close sleep  
+});//close window load finish
