@@ -25,10 +25,18 @@
 
 $(document).ready(function () {//window load finish
   setTimeout(function () {//sleep 0.5s till post loaded finish than call masonry 
-    $(function(){
-      $('#masonry-container').masonry({
-        itemSelector: '.post'
-      });
-    });
+    masonry();
   }, 500)//close sleep  
 });//close window load finish
+
+$(window).resize(function () {
+  masonry();
+});
+
+function masonry(){
+    $(function(){
+    $('#masonry-container').masonry({
+      itemSelector: '.post'
+    });
+  });
+}
