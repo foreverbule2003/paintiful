@@ -11,14 +11,14 @@ a:hover{
   text-decoration: none;
 
 }
-a{
-  text-align: center;
-  font-size: 3rem;
+
+.fa{
+  font-size: 2.5rem;
+  padding-bottom: 8%;
+  padding-left: 3%;
 }
-a.btn{
-  text-align: center;
-  margin: 0 auto; 
-}
+
+
 /*navbar*/
 .navbar-default{
   background-color: lighten(#000, 65%);
@@ -38,23 +38,20 @@ a.btn{
   background-color: lighten(#000, 75.7%);
 }
 .alert-info{
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 /*posts#index*/
 .container-fluid#index{
   margin-left: 6%;
   margin-right: 6%;
+  margin-top: 3%;
 }
 .div#post{
   /* margin-top: 15%; */
   resize: auto;
 }
-.thumbnail{
-  width:100%;
-  margin-top: 5%;
-  border-radius: 3%;
-}
+
 .thumbnail:visited{
   -webkit-filter: drop-shadow(8px 8px 20px black);
   filter: drop-shadow(8px 8px 20px black);
@@ -73,14 +70,13 @@ a.btn{
   font-family: 'cwtexyen';
   font-size: 300%;
 }
-.fa{
-  font-size: 3rem;
-}
+
 /*show*/
 .container-fluid#show{
 
   margin-left: 8%;
   margin-right: 8%;
+  margin-bottom: 5%;
 
 }
 #other_random_post{
