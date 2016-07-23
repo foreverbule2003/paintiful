@@ -16,9 +16,13 @@ a:hover{
 
 .fa{
   font-size: 2.5rem;
-  padding-bottom: 8%;
+  padding-bottom: 5%;
   padding-left: 3%;
 }
+a.btn.btn-danger{
+  margin-right: 3%;
+}
+
 .image{
   max-width:100%;
 }
@@ -49,7 +53,10 @@ a:hover{
 /*nav_category*/
 .container#nav_category{
   margin-bottom: 2rem;
-  width: 100%;
+  margin-right: 0;
+}
+.nav-tabs > li > a{
+  font-size: 1.5rem;
 }
 
 .alert-info{
@@ -57,32 +64,18 @@ a:hover{
 }
 
 /*posts#index*/
-
 .thumbnail:visited{
   -webkit-filter: drop-shadow(8px 8px 20px black);
   filter: drop-shadow(8px 8px 20px black);
-/*  border-radius: 100%;
-*/}
+}
 .thumbnail:hover{
   -webkit-filter: drop-shadow(8px 8px 20px black);
   filter: drop-shadow(8px 8px 10px black);
 }
-/* .show_title{
-  font-family: 'cwtexyen';
-  font-size: 500%;
-}
-.show_description{
-  font-family: 'cwtexyen';
-  font-size: 300%;
-} */
 
 /*show*/
 .container-fluid#show{
   margin: 0 3%; 
-/*   margin-left: 3%;
-  margin-right: 3%; */
-  /* margin-bottom: 5%; */
-
 }
 #other_random_post{
   margin-top: 10%;
@@ -95,21 +88,14 @@ a:hover{
 .random_post:visited{
   -webkit-filter: drop-shadow(8px 8px 20px black);
   filter: drop-shadow(8px 8px 20px black);
-/*  border-radius: 100%;
-*/}
+}
 .random_post:hover{
   -webkit-filter: drop-shadow(8px 8px 20px black);
   filter: drop-shadow(8px 8px 10px black);
-/*  border-radius: 100%;
-*/}
+}
 
 /*footer*/
-#afooter{
-  margin-top: 10%;
-  text-align: center;
-
-  max-width: 100%;
-  max-height: auto;
+#footer{
   background-color: lighten(#000, 85.7%);
 }
 
