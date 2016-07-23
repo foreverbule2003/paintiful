@@ -8,7 +8,6 @@ class Post < ActiveRecord::Base
   def do_like
     @post = self
     @post.like += 1
-    @post.counter -= 1
     @post.save
   end
 

@@ -50,26 +50,13 @@ a:hover{
 .container#nav_category{
   margin-bottom: 2rem;
   width: 100%;
-
 }
-
-
-
 
 .alert-info{
   font-size: 2rem;
 }
 
 /*posts#index*/
-/* .container-fluid#index{
-  margin-left: 6%;
-  margin-right: 6%;
-  margin-top: 3%;
-} */
-/* .div#post{
-  margin-top: 15%;
-  resize: auto;
-} */
 
 .thumbnail:visited{
   -webkit-filter: drop-shadow(8px 8px 20px black);
@@ -91,10 +78,10 @@ a:hover{
 
 /*show*/
 .container-fluid#show{
-
-  margin-left: 8%;
-  margin-right: 8%;
-  margin-bottom: 5%;
+  margin: 0 3%; 
+/*   margin-left: 3%;
+  margin-right: 3%; */
+  /* margin-bottom: 5%; */
 
 }
 #other_random_post{
