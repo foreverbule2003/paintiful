@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :posts do
     member do 
-      get 'like', to: 'posts#like'
+      get 'like'
     end
   end
   resources :categorys

@@ -4,6 +4,7 @@ gem 'devise'
 gem 'paperclip', '~> 4.3'
 gem 'aws-sdk', '<2.0'
 gem 'rspec-rails'
+gem 'factory_girl_rails'
 gem 'figaro'
 # Use postgresql as the database for Active Record
 gem 'pg'

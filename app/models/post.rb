@@ -6,12 +6,12 @@ class Post < ActiveRecord::Base
   belongs_to :category
   
   def do_like
-    @post = self
-    @post.like += 1
-    @post.save
+    self.like += 1
+    self.save
   end
 
   def do_view
+    self.counter ||= 0
     self.counter += 1
     self.save
   end

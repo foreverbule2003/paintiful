@@ -1,10 +1,11 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: [:edit, :show, :update, :destroy, :like, :myvote]
+  before_action :find_post, only: [:edit, :show, :update, :destroy, :like]
   def index
     @posts= Post.all.order("created_at DESC")
   end
 
   def new
+    # byebug
     @post= current_user.posts.build
   end
 
@@ -43,6 +44,7 @@ class PostsController < ApplicationController
   def like
     @post.do_like
     redirect_to :back
+    byebug
   end
 
 

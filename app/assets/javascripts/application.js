@@ -23,20 +23,26 @@
 //= require bootstrap/alert
 //= require_tree .
 
-$(document).ready(function () {//window load finish
-  setTimeout(function () {//sleep 0.5s till post loaded finish than call masonry 
-    masonry();
-  }, 500)//close sleep  
-});//close window load finish
 
-$(window).resize(function () {
-  masonry();
+$(document).ready(function () {
+  delay_masonry();
 });
 
+$(window).resize(function () {
+  delay_masonry();
+});
+
+
 function masonry(){
-    $(function(){
+  $(function(){
     $('#masonry-container').masonry({
       itemSelector: '.post'
     });
   });
+}
+
+function delay_masonry(){
+  setTimeout(function () { 
+    masonry();
+  }, 500)
 }
