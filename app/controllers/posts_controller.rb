@@ -45,8 +45,6 @@ class PostsController < ApplicationController
     @post.do_like
     redirect_to @post
     # redirect_to :back
-    # puts "Hi"
-    # byebug
   end
 
 

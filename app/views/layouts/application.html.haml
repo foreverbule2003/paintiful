@@ -8,12 +8,15 @@
   = csrf_meta_tags
 
 %body.body
-  =render 'common/navbar'
-  .alert-info
-    = notice
-  =render 'common/nav_category'
-  =yield
-  =render 'common/footer'
+  .container
+    =render 'common/navbar'
+    .alert-info
+      = notice
+    =render 'common/nav_category'
+  .container
+    =yield
+  .container
+    =render 'common/footer'
   
 
 

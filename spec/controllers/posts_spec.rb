@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe PostsController, type: :controller do
   before(:all) do 
     @post = Post.create(title: "Post", like: 1)
-    # @post2 = Post.create(title: "Post2", like: 1)
     @post_params = {title: "Post"}
 
   end
@@ -19,8 +18,7 @@ RSpec.describe PostsController, type: :controller do
   end
 
   it "#show" do 
-    # @post1 = Post.create(title: "Post1")
-    get :show, id: @post[:id]#Verb: get, URI Pattern: /posts/:id
+    get :show, id: @post.id#Verb: get, URI Pattern: /posts/:id
   end
 
   it "#edit" do
@@ -92,17 +90,23 @@ RSpec.describe PostsController, type: :controller do
     end
   end
 
-  describe "like" do 
+  #describe "like" do 
     # before(:each) do 
     #   request.env["HTTP_REFERER"] = "where_i_come_from"
     # end
 
     it "do_like" do
-      @before_like = @post.like 
-      get :like, id: @post.id
+      # @before_like = @post.like 
+      # get :like, id: @post[:id]
+      # byebug
+      # expect(@post.like).to eq(@before_like + 1) 
+      # expect{ post :like, id: @post[:id] }.to change{ @post.like }.by(1)
+      expect(@post.like).to eq(1)
+      # post :like, id: @post[:id]
+      @post.do_like
+      expect(@post.like).to eq(2)
       byebug
-      expect(@post.like).to eq(@before_like + 1) 
-      # expect{ get :like, id: @post2.id }.to change{ @post2.like }.by(1)
+      @before_like = @post.like
     end
 
     it "go back" do 
@@ -111,7 +115,7 @@ RSpec.describe PostsController, type: :controller do
       # expect(response).to "where_i_come_from"
       # response.should redirect_to "where_i_come_from"
     end
-  end
+  # end
 end
 
 def login_user
