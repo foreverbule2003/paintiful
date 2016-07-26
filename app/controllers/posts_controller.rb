@@ -43,8 +43,10 @@ class PostsController < ApplicationController
 
   def like
     @post.do_like
-    redirect_to :back
-    byebug
+    redirect_to @post
+    # redirect_to :back
+    # puts "Hi"
+    # byebug
   end
 
 
