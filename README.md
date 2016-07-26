@@ -1,1 +1,1 @@
-#This is [pinterest](https://www.pinterest.com/) like app
+#This is [pinterest](https://www.pinterest.com/) like app built by Ruby on Rails
