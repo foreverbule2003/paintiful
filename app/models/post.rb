@@ -23,4 +23,5 @@ class Post < ActiveRecord::Base
     Post.where.not(id: self && random_post).sample()
   end
 
+
 end

@@ -90,32 +90,17 @@ RSpec.describe PostsController, type: :controller do
     end
   end
 
-  #describe "like" do 
-    # before(:each) do 
-    #   request.env["HTTP_REFERER"] = "where_i_come_from"
-    # end
+  describe "like" do 
+    before(:each) do 
+      request.env["HTTP_REFERER"] = "current_place"
+    end
 
     it "do_like" do
-      # @before_like = @post.like 
-      # get :like, id: @post[:id]
-      # byebug
-      # expect(@post.like).to eq(@before_like + 1) 
-      # expect{ post :like, id: @post[:id] }.to change{ @post.like }.by(1)
-      expect(@post.like).to eq(1)
-      # post :like, id: @post[:id]
-      @post.do_like
-      expect(@post.like).to eq(2)
-      byebug
-      @before_like = @post.like
+      # expect{ get :like, id: @post[:id] }.to change{ @post.like }.by(1)
+      expect{ get :like, id: Post.last.id }.to change{ Post.last.like }.by(1)
+      expect(response).to redirect_to "current_place"
     end
-
-    it "go back" do 
-      # request.env["HTTP_REFERER"] = "where_i_come_from"
-      # get 'goback'
-      # expect(response).to "where_i_come_from"
-      # response.should redirect_to "where_i_come_from"
-    end
-  # end
+  end
 end
 
 def login_user
