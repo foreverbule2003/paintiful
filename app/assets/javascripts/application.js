@@ -25,7 +25,7 @@
 
 
 $(document).ready(function () {
-  delay_masonry();
+   delay_masonry();
 });
 
 $(window).resize(function () {
