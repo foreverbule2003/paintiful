@@ -1,9 +1,8 @@
 class Post < ActiveRecord::Base
-  # acts_as_votable
-  belongs_to :user
   has_attached_file :image, styles: { medium: "1200*900", small: "400*300>"}
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
   belongs_to :category
+  belongs_to :user
   
   def do_like
     self.like += 1
@@ -17,10 +16,11 @@ class Post < ActiveRecord::Base
   end
 
   def random_post
-    Post.where.not(id: self).order("RANDOM()").first
+    Post.where.not(id: self).sample()
   end
   
   def other_random_post(random_post)
-    Post.where.not(id: self && random_post).order("RANDOM()").first
+    Post.where.not(id: self && random_post).sample()
   end
+
 end
