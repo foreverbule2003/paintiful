@@ -5,6 +5,8 @@
 @import "font-awesome";
 @import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
 
 .body{
   background-color: lighten(#000, 75.7%);
@@ -15,12 +17,16 @@
   padding-bottom: 10%;
   padding-left: 3%;
 }
+a{
+  font-family: 'Lato';
+}
 a.btn.btn-danger{
   margin-right: 3%;
 }
 
-.image{
+.thumbnail a > img{
   max-width:100%;
+  /* width: 100%; */
 }
 
 #masonry-container {
@@ -136,6 +142,49 @@ a.btn.btn-danger{
   background-color: lighten(#000, 85.7%);
 }
 
-/* @media only screen and (max-width: ) */
+@media screen and (max-width: 768px) and (min-width: 415px){
+  .thumbnail a > img{
+    width: 100%;
+  }
+  .fa {
+    font-size: 6rem;
+    padding-bottom: 7%;
+    padding-left: 3%;
+  }
+  .nav-tabs > li > a {
+    font-size: 3.5rem;
+  }
 
+  .navbar-brand {
+    font-size: 5rem;
+  }
+  .navbar-collapse, .navbar-default .navbar-form {
+    padding-bottom: 4%;
+  }
+
+  .navbar-nav > li > a {
+    font-size: 4rem;
+    margin-bottom: 5%;
+}
+}
+
+@media screen and (max-width: 414px){
+  .nav-tabs > li > a {
+    font-size: 1.5rem;
+  }
+  .navbar-default .navbar-nav > li > a {
+    font-size: 3rem;
+    padding: 5%;
+  }
+
+
+  .fa {
+    font-size: 2.5rem;
+    padding-bottom: 7%;
+    /* padding-left: 3%; */
+  }
+  .a.glyphicon.glyphicon-log-out{
+    padding-bottom: 0;
+  } 
+}
 

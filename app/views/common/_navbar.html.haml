@@ -1,15 +1,22 @@
 %nav.navbar.navbar-default
   .container-fluid#nav
     .navbar-header
+      %button.navbar-toggle{"data-target" => "#myNav", "data-toggle" => "collapse", :type => "button"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
       = link_to " Paintiful", root_path, class: "navbar-brand"
 
-    .navbar-collapse-1.collapse.navbar-collapse
+    #myNav.collapse.navbar-collapse
+      %ul.nav.navbar-nav
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
-          %li= link_to "", new_post_path ,class: "glyphicon glyphicon-pencil"
-          %li= link_to "", destroy_user_session_path, method: :delete, class: "glyphicon glyphicon-log-out"
+          %li
+            = link_to " Post", new_post_path ,class: "fa fa-paint-brush"
+          %li
+            = link_to " Logout", destroy_user_session_path, method: :delete, class: "fa fa-sign-out"
         - else
-          %li= link_to "", new_user_session_path,class: "pull-right", class: "glyphicon glyphicon-log-in"
+          %li
+            = link_to " Login", new_user_session_path, class: "fa fa-sign-in "
 
- 
 

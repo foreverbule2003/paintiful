@@ -13,6 +13,7 @@ gem 'redactor-rails', github: "kausters/redactor-rails"
 gem 'rails', '4.2.0'
 
 #Styling
+gem "font-awesome-rails"
 gem 'imagesLoaded_rails'
 gem 'masonry-rails', '~> 0.2.1'
 gem 'font-awesome-sass'

@@ -26,6 +26,7 @@
 
 $(document).ready(function () {
    delay_masonry();
+   console.log(window.screen.width);
 });
 
 $(window).resize(function () {
@@ -36,7 +37,8 @@ $(window).resize(function () {
 function masonry(){
   $(function(){
     $('#masonry-container').masonry({
-      itemSelector: '.post'
+      itemSelector: '.post',
+      gutterWidth: 0
     });
   });
 }
