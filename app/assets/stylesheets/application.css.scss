@@ -1,5 +1,5 @@
-@import "bootstrap-sprockets";
 @import "bootstrap";
+@import "bootstrap-sprockets";
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
@@ -13,17 +13,22 @@
 }
 
 .fa{
-  font-size: 2.5rem;
-  padding-bottom: 10%;
-  padding-left: 3%;
+  font-size: 1.5rem;
+/*   padding-bottom: 13%;
+  padding-left: 3%; */
 }
 a{
   font-family: 'Lato';
 }
 a.btn.btn-danger{
-  margin-right: 3%;
+  /* margin-right: 3%; */
 }
-
+span.badge{
+  font-size:  2rem;
+}
+.thumbnail{
+  padding: 5%;
+}
 .thumbnail a > img{
   max-width:100%;
   /* width: 100%; */
@@ -120,10 +125,28 @@ a.btn.btn-danger{
 .container-fluid#show{
   /* margin: 0 3%;  */
 }
+.div.img-responsive{
+  /* max-width: 100%;   */
+}
+img.show_image{
+  max-width: 100%;
+}
 #other_random_post{
   margin-top: 10%;
 }
-
+.show_also_like{
+  font-size: 2.75rem;
+}
+.show_title{
+  font-size: 5rem;
+}
+.show_like > a{
+  color: white;
+}
+.btn-group > .btn:first-child {
+    margin-left: 0;
+    color: #d9534f;
+}
 
 .random_post{
   width: 100%;

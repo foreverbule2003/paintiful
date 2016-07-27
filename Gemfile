@@ -19,6 +19,7 @@ gem 'masonry-rails', '~> 0.2.1'
 gem 'font-awesome-sass'
 gem 'haml'
 gem 'bootstrap-sass', '~> 3.3.5'
+# gem 'bootstrap', '~> 4.0.0.alpha3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

@@ -1,40 +1,52 @@
 .container-fluid#show
-  .row
-    .col-md-9
-      .div.img-responsive
-        = image_tag @post.image.url(:medium), class: "image"
-
-      .col-md-12.col-offset-3   
-        %h1.show_title
-          = @post.title#, class: "show_title"
-          = link_to like_post_path(@post), method: :get, class: "btn btn-danger pull-right" do 
-            %i.fa.fa-heart 
-        %i.fa.fa-eye 
-          =@post.counter
-        %i.fa.fa-heart
-          =@post.like
-          -# = @post.category.name
-        .show_description
-          = simple_format(@post.description)#, class: "show_description"
-
-      .btn-group.btn-group-lg
-        .btn.btn-default
-          = link_to "Home", root_path
-        - if user_signed_in?
-          .btn.btn-default
-            = link_to "Edit", edit_post_path(@post)
-          .btn.btn-default
-            = link_to "Delete", post_path(@post),method: :delete,data:{confirm: "Are you sure?"}
+  -# .row
+  .col-md-9.thumbnail
+    = image_tag @post.image.url(:medium), class: "show_image"
+    %p.show_title
+      =@post.title
+    
+    %span.badge
+      =@post.counter 
+      %i.fa.fa-eye 
       
-      = render 'disqus'
+    %span.badge
+      =@post.like
+      %i.fa.fa-heart
 
-    .col-md-3
-      .div
-        %h1 You might also like:
-        #random_post
-          =link_to (image_tag @random_post.image.url(:small), class: "random_post"), @random_post
-        #other_random_post  
-          =link_to (image_tag @other_random_post.image.url(:small), class: "random_post"), @other_random_post
+    
+    .show_description
+      = simple_format(@post.description)#, class: "show_description"
+
+    .btn-group.btn-group-lg
+      .btn.btn-default.i.fa.fa-heart
+        = link_to "", like_post_path(@post), method: :get
+      .btn.btn-default
+        = link_to "Home", root_path
+
+      - if user_signed_in?
+        .btn.btn-default
+          = link_to "Edit", edit_post_path(@post)
+        .btn.btn-default
+          = link_to "Delete", post_path(@post),method: :delete,data:{confirm: "Are you sure?"}
+      
+    = render 'disqus'
+
+  .col-md-3
+    .div
+      %p.show_also_like You might also like:
+      #random_post
+        =link_to (image_tag @random_post.image.url(:small), class: "random_post thumbnail"), @random_post
+      #other_random_post  
+        =link_to (image_tag @other_random_post.image.url(:small), class: "random_post thumbnail"), @other_random_post
+
+    
+      
+
+  
+
+  
+
+    
 
         
 

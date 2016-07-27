@@ -46,7 +46,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
-    autoprefixer-rails (6.0.3)
+    autoprefixer-rails (6.1.1)
       execjs
       json
     awesome_print (1.6.1)
@@ -121,6 +121,8 @@ GEM
       railties (>= 3.0.0)
     figaro (1.1.1)
       thor (~> 0.14)
+    font-awesome-rails (4.5.0.0)
+      railties (>= 3.2, < 5.0)
     font-awesome-sass (4.4.0)
       sass (>= 3.2)
     globalid (0.3.6)
@@ -292,6 +294,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   figaro
+  font-awesome-rails
   font-awesome-sass
   haml
   imagesLoaded_rails
