@@ -16,7 +16,6 @@
 //= require masonry/jquery.masonry
 //= require masonry/jquery.imagesloaded.min
 //= require masonry/jquery.infinitescroll.min
-
 //= require imagesloaded
 //= require turbolinks
 //= require bootstrap/alert
