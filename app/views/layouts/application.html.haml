@@ -1,26 +1,26 @@
-!!!
+!!! 5
 %html
-%head
-  %title
-    Paintiful
-  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-  = javascript_include_tag 'application', 'data-turbolinks-track' => true
-  = csrf_meta_tags
-  %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+  %head
+    %title
+      Paintiful
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
 
 
-%body.body
-  .container
-    =render 'common/navbar'
-    .alert-info
-      = notice
-    =render 'common/nav_category'
+  %body.body
+    .container
+      =render 'common/navbar'
+      .alert-info
+        = notice
+      =render 'common/nav_category'
 
-  .container#yiled
-  .container=yield
+    .container#yiled
+    .container=yield
 
-  .container
-    =render 'common/footer'
+    .container
+      =render 'common/footer'
   
 
 
