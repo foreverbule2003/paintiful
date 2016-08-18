@@ -15,9 +15,9 @@
           %li
             = link_to " Post", new_post_path ,class: "fa fa-paint-brush"
           %li
-            = link_to " Logout", destroy_user_session_path, method: :delete, class: "fa fa-sign-out"
+            = link_to " Sign out", destroy_user_session_path, method: :delete, class: "fa fa-sign-out"
         - else
           %li
-            = link_to " Login", new_user_session_path, class: "fa fa-sign-in "
+            = link_to " Sign in", new_user_session_path, class: "fa fa-sign-in "
 
 

@@ -2,15 +2,11 @@ require 'rails_helper'
 
 feature "Create Post" do
   background do
-    # Post.create(title: "Post", description: "Hello world")
-    
-    # byebug
-
-    current_user=User.create(id: 123)
-    
+    user = FactoryGirl.create(:user)
+    login_as(user, scope: :user)
   end
 
-  scenario "correct credentials" do
+  scenario "successful" do
     visit '/posts/new'
     fill_in 'Title', with: 'Post'
     fill_in 'Description', with: 'Hello World'
@@ -19,5 +15,10 @@ feature "Create Post" do
     expect(page).to have_content 'Hello World'
   end
 
+  scenario "title blank" do 
+    visit 'posts/new'
+    click_button 'Create Post'
+    expect(page).to have_content "can't be blank"    
+  end
 
 end
