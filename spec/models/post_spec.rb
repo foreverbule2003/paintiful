@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do 
   before(:each) do 
-    @post = Post.create(like: 0, counter: 0)
+    @post = Post.create(title: "post", like: 0, counter: 0)
     @other_post = @post.random_post
   end
   it 'have columns(id title description category_id counter like)'do 
@@ -14,6 +14,11 @@ RSpec.describe Post, type: :model do
     expect(columns).to include("counter")
     expect(columns).to include("like")
   end 
+
+  it 'title is empty' do 
+    empty_title = Post.create(title: "")
+    expect(empty_title).not_to be_valid
+  end
 
   it 'belongs_to category'do
     category = Category.create(name: "test_category")
