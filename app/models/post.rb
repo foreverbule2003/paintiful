@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
   belongs_to :category
   belongs_to :user
   validates :title, presence: true
+  validates :description, length: { maximum: 140 }
     
   def do_like
     self.like += 1

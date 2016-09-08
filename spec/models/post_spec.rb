@@ -48,7 +48,11 @@ RSpec.describe Post, type: :model do
     expect(@post.other_random_post(@other_post) && @other_post).not_to eq(@post)
   end
 
-
+  it 'description is too long' do 
+    toolong = "a" * 200
+    toolong_post = Post.create(title: "toolong", description: toolong)
+    expect(toolong_post).not_to be_valid
+  end
   
 
 end
