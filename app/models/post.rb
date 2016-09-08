@@ -5,7 +5,9 @@ class Post < ActiveRecord::Base
   belongs_to :user
   validates :title, presence: true
   validates :description, length: { maximum: 140 }
-    
+  
+  scope :recent, -> { order("created_at DESC") }
+
   def do_like
     self.like += 1
     self.save

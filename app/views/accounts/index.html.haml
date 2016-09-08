@@ -1,0 +1,26 @@
+%h2.text-center My Posts
+
+%table.table.table-bordered
+  %thead
+    %tr
+      %th id
+      -# %th Image
+      %th Title
+      %th Views
+      %th Likes
+      %th Created at
+      %th Edit 
+  %tbody
+    -@posts.each do |post|
+      %tr
+        %td= post.id
+        -# %td{width: "300"}= image_tag(post.image)
+        %td= link_to post.title, post_path(post)
+        %td= post.like
+        %td= post.counter
+        %td= render_post_created_time(post)
+
+        %td
+          = link_to edit_post_path(post) do 
+            %i.fa.fa-pencil
+

@@ -9,4 +9,10 @@ Rails.application.routes.draw do
   resources :categorys
   root 'posts#index'
 
+  resources :accounts do 
+    member do 
+      get 'me'
+    end
+  end
+
 end
