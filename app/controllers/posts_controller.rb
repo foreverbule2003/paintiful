@@ -49,6 +49,17 @@ class PostsController < ApplicationController
     # go_back
   end
 
+  def add_to_collection
+    @post = Post.find(params[:id])
+    if !my_collection.posts.include?(@post)
+      my_collection.add_post_to_collection(@post)   
+      flash[:notice] = "Add to my collection success"
+    else
+      flash[:warning] = "This post alreay in collection"   
+    end
+    redirect_to :back
+  end
+
   private
   def find_post
     @post = Post.find(params[:id])  

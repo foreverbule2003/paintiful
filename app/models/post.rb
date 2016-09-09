@@ -8,6 +8,8 @@ class Post < ActiveRecord::Base
   
   scope :recent, -> { order("created_at DESC") }
 
+  has_many :post_collections
+
   def do_like
     self.like += 1
     self.save

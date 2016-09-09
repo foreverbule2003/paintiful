@@ -28,6 +28,8 @@
           = link_to "Edit", edit_post_path(@post)
         .btn.btn-default
           = link_to "Delete", post_path(@post),method: :delete,data:{confirm: "Are you sure?"}
+        .btn.btn-default
+          = link_to "Add to collection", add_to_collection_post_path(@post), method: :post
       
     = render 'disqus'
 

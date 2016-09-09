@@ -6,4 +6,20 @@ class ApplicationController < ActionController::Base
   def go_back
     redirect_to :back
   end
+  helper_method :my_collection
+
+  def my_collection
+    @my_collection ||= find_my_collection  
+  end
+
+  def find_my_collection
+    my_collection = Collection.find_by_id(session[:collection_id])
+
+    if !my_collection.present?
+      my_collection = Collection.create
+    end
+
+    session[:collection_id] = my_collection.id
+    my_collection
+  end
 end

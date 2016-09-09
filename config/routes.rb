@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :posts do
     member do 
       get 'like'
+      post :add_to_collection
     end
   end
   resources :categorys
@@ -11,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :accounts do 
     member do 
-      get 'me'
+      delete :cancel_post
     end
   end
 

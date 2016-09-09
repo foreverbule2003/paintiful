@@ -13,14 +13,13 @@
     .container
       =render 'common/navbar'
       .alert-info
-        = notice
+        =notice_message
       =render 'common/nav_category'
 
-    .container#yiled
     .container=yield
 
     .container
-      =render 'common/footer'
+      -# =render 'common/footer'
   
 
 

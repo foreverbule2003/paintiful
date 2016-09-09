@@ -1,5 +1,4 @@
 %h2.text-center My Posts
-
 %table.table.table-bordered
   %thead
     %tr
@@ -16,11 +15,32 @@
         %td= post.id
         -# %td{width: "300"}= image_tag(post.image)
         %td= link_to post.title, post_path(post)
-        %td= post.like
         %td= post.counter
+        %td= post.like
         %td= render_post_created_time(post)
-
         %td
           = link_to edit_post_path(post) do 
             %i.fa.fa-pencil
+
+%h2.text-center My Collections
+%table.table.table-bordered
+  %thead
+    %tr
+      %th Id
+      %th Title
+      %th Views
+      %th Likes
+      %th Created at
+      %th Edit
+  %tbody
+    -my_collection.post_collections.each do |pc|
+      %tr
+        %td= pc.post.id
+        %td= link_to pc.post.title, post_path(pc.post)
+        %td= pc.post.counter
+        %td= pc.post.like
+        %td= pc.post.created_at
+        %td
+          = link_to cancel_post_account_path(pc.post), method: :delete do 
+            %i.fa.fa-times
 
