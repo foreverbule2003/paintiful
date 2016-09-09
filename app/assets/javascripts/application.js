@@ -22,9 +22,14 @@
 //= require_tree .
 
 
-$(document).ready(function () {
-   delay_masonry();
-   console.log(window.screen.width);
+// $(document).ready(function () {
+//    delay_masonry();
+//    // masonry();
+//    console.log(window.screen.width);
+// });
+
+$(window).load(function(){
+  masonry();
 });
 
 $(window).resize(function () {
@@ -44,5 +49,5 @@ function masonry(){
 function delay_masonry(){
   setTimeout(function () { 
     masonry();
-  }, 10)
+  }, 500)
 }
