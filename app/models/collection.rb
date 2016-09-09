@@ -6,6 +6,5 @@ class Collection < ActiveRecord::Base
     pc = post_collections.create
     pc.post = post
     pc.save
-    
   end
 end
