@@ -1,3 +1,17 @@
+%h2.text-center My Profile
+.jumbotorn
+  %h1
+    Hi! 
+    =@user.name
+  %p
+    Email: 
+    =@user.email
+
+  %p
+    Post Count:
+    =@user.posts.size
+  =link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary"
+
 %h2.text-center My Posts
 %table.table.table-bordered
   %thead

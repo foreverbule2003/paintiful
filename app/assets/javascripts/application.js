@@ -44,5 +44,5 @@ function masonry(){
 function delay_masonry(){
   setTimeout(function () { 
     masonry();
-  }, 500)
+  }, 10)
 }

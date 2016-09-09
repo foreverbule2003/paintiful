@@ -1,4 +1,5 @@
 module ApplicationHelper
+
   def notice_message
     alert_types = { notice: :success, alert: :danger}
 
@@ -15,6 +16,9 @@ module ApplicationHelper
     alerts.join("\n").html_safe
   end
 
+
+
+  
   def render_post_created_time(post)
     post.created_at.strftime("%F %T")
   end
@@ -22,4 +26,6 @@ module ApplicationHelper
   def render_post_updated_time(post)
     post.updated_at.strftime("%F %T")
   end
+
+
 end
