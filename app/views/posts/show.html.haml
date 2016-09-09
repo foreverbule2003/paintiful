@@ -19,17 +19,17 @@
 
     .btn-group.btn-group-lg
       .btn.btn-default.i.fa.fa-heart
-        = link_to "", like_post_path(@post), method: :get
-      .btn.btn-default
-        = link_to "Home", root_path
+        = link_to "Like", like_post_path(@post, title: "Like"), method: :get
 
       - if user_signed_in?
+        .btn.btn-default
+          = link_to add_to_collection_post_path(@post), method: :post do
+            %i.fa.fa-archive Collection
         .btn.btn-default
           = link_to "Edit", edit_post_path(@post)
         .btn.btn-default
           = link_to "Delete", post_path(@post),method: :delete,data:{confirm: "Are you sure?"}
-        .btn.btn-default
-          = link_to "Add to collection", add_to_collection_post_path(@post), method: :post
+        
       
     = render 'disqus'
 
