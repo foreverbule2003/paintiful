@@ -11,9 +11,15 @@ Rails.application.routes.draw do
   root 'posts#index'
 
   resources :accounts do 
+    collection do 
+      get :my_posts
+      get :my_collections
+    end
     member do 
       delete :cancel_post
     end
   end
+  # get 'accounts/my_posts' => 'accounts#my_posts'
+  # get 'accounts/' => 'accounts#my_collections'
 
 end

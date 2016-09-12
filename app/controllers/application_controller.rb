@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   helper_method :go_back
   before_action :user_strong_parameter, if: :devise_controller?
 
+
   def go_back
     redirect_to :back
   end

@@ -23,17 +23,13 @@
 
 
 $(document).ready(function () {
-   delay_masonry();
-   // masonry();
-   console.log(window.screen.width);
+  load_posts();
+  // console.log(window.screen.width);
 });
 
-$(window).load(function(){
-  masonry();
-});
 
 $(window).reload(function(){
-  masonry();
+  load_posts();
 });
 
 $(window).resize(function () {
@@ -54,4 +50,10 @@ function delay_masonry(){
   setTimeout(function () { 
     masonry();
   }, 500)
+}
+
+function load_posts(){
+  $('#masonry-container').hide()
+  delay_masonry();
+  $('#masonry-container').fadeIn(3000);
 }

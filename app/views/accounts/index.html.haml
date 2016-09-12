@@ -10,54 +10,15 @@
   %p
     Post Count:
     =@user.posts.size
-  =link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary"
+  =link_to "Edit Profile", edit_user_registration_path, class: "btn btn-success"
+  =link_to "My Posts", my_posts_accounts_path, remote: true, class: "btn btn-primary"
+  =link_to "My Collections", my_collections_accounts_path, remote: true, class: "btn btn-primary"
 
-%h2.text-center My Posts
-%table.table.table-bordered
-  %thead
-    %tr
-      %th Id
-      %th Image
-      %th Title
-      %th Views
-      %th Likes
-      %th Created at
-      %th Edit 
-  %tbody
-    -@posts.each do |post|
-      %tr
-        %td= post.id
-        %td{width: "100"}= image_tag(post.image(:small))
-        %td= link_to post.title, post_path(post)
-        %td= post.counter
-        %td= post.like
-        %td= render_post_created_time(post)
-        %td
-          = link_to edit_post_path(post) do 
-            %i.fa.fa-pencil
-=will_paginate(@posts)
+#my_posts
+#my_collections
+  
 
-%h2.text-center My Collections
-%table.table.table-bordered
-  %thead
-    %tr
-      %th Id
-      %th Image
-      %th Title
-      %th Views
-      %th Likes
-      %th Created at
-      %th Edit
-  %tbody
-    -@my_collection.each do |pc|
-      %tr
-        %td= pc.id
-        %td{width: "100"}= image_tag(pc.image(:small))
-        %td= link_to pc.title, post_path(pc)
-        %td= pc.counter
-        %td= pc.like
-        %td= pc.created_at
-        %td
-          = link_to cancel_post_account_path(pc), method: :delete do 
-            %i.fa.fa-times
-=will_paginate(my_collection)
+
+-# =render 'my_posts'
+
+-#=render 'my_collections'
