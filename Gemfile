@@ -12,6 +12,9 @@ gem 'redactor-rails', github: "kausters/redactor-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 gem 'capybara'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
 
 #Styling
 gem "font-awesome-rails"

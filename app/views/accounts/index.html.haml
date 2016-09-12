@@ -35,6 +35,7 @@
         %td
           = link_to edit_post_path(post) do 
             %i.fa.fa-pencil
+=will_paginate(@posts)
 
 %h2.text-center My Collections
 %table.table.table-bordered
@@ -48,15 +49,15 @@
       %th Created at
       %th Edit
   %tbody
-    -my_collection.post_collections.each do |pc|
+    -@my_collection.each do |pc|
       %tr
-        %td= pc.post.id
-        %td{width: "100"}= image_tag(pc.post.image(:small))
-        %td= link_to pc.post.title, post_path(pc.post)
-        %td= pc.post.counter
-        %td= pc.post.like
-        %td= pc.post.created_at
+        %td= pc.id
+        %td{width: "100"}= image_tag(pc.image(:small))
+        %td= link_to pc.title, post_path(pc)
+        %td= pc.counter
+        %td= pc.like
+        %td= pc.created_at
         %td
-          = link_to cancel_post_account_path(pc.post), method: :delete do 
+          = link_to cancel_post_account_path(pc), method: :delete do 
             %i.fa.fa-times
-
+=will_paginate(my_collection)
