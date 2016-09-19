@@ -10,15 +10,10 @@
   %p
     Post Count:
     =@user.posts.size
+
   =link_to "Edit Profile", edit_user_registration_path, class: "btn btn-success"
   =link_to "My Posts", my_posts_accounts_path, remote: true, class: "btn btn-primary"
   =link_to "My Collections", my_collections_accounts_path, remote: true, class: "btn btn-primary"
 
 #my_posts
 #my_collections
-  
-
-
--# =render 'my_posts'
-
--#=render 'my_collections'

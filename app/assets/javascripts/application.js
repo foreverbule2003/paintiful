@@ -23,10 +23,15 @@
 
 
 $(document).ready(function () {
-  load_posts();
+  delay_masonry();
+  // load_posts();
   // console.log(window.screen.width);
 });
 
+
+$(window).ready(function(){
+  load_posts();
+});
 
 $(window).reload(function(){
   load_posts();
