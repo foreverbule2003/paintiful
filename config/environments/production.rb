@@ -61,4 +61,15 @@ Rails.application.configure do
   config.assets.prefix = "/shared/public/assets"
   #config.assets.prefix = "/public/current/public/assets"
   #config.assets.prefix = "/current/app/assets"
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    port: 587,
+    address: "smtp.mailgun.org",
+    user_name: ENV['MAILER_USER_NAME'],
+    password: ENV['MAILER_PASSWORD'],
+    domain: ENV['MAILER_DOMAIN'],
+    authentication: :plain,
+    enable_starttls_auto: true
+  }
 end
