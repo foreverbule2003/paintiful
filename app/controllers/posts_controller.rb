@@ -13,7 +13,7 @@ class PostsController < ApplicationController
 
     if @post.save
       redirect_to @post
-      flash[:notice] = "Post created success"
+      flash[:notice] = I18n.t("controllers.posts.create")
     else
       render :new
     end
@@ -32,7 +32,7 @@ class PostsController < ApplicationController
   def update
     if @post.update(post_params)
       redirect_to @post
-      flash[:notice] = "Post updated success"      
+      flash[:notice] = I18n.t("controllers.posts.update")      
     else
       render :edit
     end
@@ -41,7 +41,7 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     redirect_to root_path
-    flash[:danger] = "Post has been deleted"
+    flash[:danger] = I18n.t("controllers.posts.destroy")
   end
 
   def like
@@ -54,9 +54,9 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     if !my_collection.posts.include?(@post)
       my_collection.add_post_to_collection(@post)   
-      flash[:notice] = "Add to my collection success"
+      flash[:notice] = I18n.t("controllers.posts.add_to_collection.success")
     else
-      flash[:warning] = "This post alreay in collection"   
+      flash[:warning] = I18n.t("controllers.posts.add_to_collection.fail")
     end
     redirect_to :back
   end

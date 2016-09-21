@@ -1,0 +1,9 @@
+zh-TW:
+  controllers:
+    posts:
+      create: 新增成功
+      update: 更新成功
+      destroy: 刪除成功
+      add_to_collection:
+        success: 收藏成功
+        fail: 已經加入收藏
