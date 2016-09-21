@@ -5,16 +5,15 @@ class PostsController < ApplicationController
   end
 
   def new
-    # byebug
     @post= current_user.posts.build
-    # @post = Post.new
   end
 
   def create
     @post= current_user.posts.build(post_params)
-    # @post = Post.create(post_params)
+
     if @post.save
       redirect_to @post
+      flash[:notice] = "Post created success"
     else
       render :new
     end
@@ -33,6 +32,7 @@ class PostsController < ApplicationController
   def update
     if @post.update(post_params)
       redirect_to @post
+      flash[:notice] = "Post updated success"      
     else
       render :edit
     end
@@ -41,6 +41,7 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     redirect_to root_path
+    flash[:danger] = "Post has been deleted"
   end
 
   def like
