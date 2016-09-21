@@ -112,5 +112,6 @@ FactoryGirl.define do
   factory :admin, class: User do
     email 'aaa@bbbcom'
     password '12345678'
+    confirmed_at Time.now
   end
 end
