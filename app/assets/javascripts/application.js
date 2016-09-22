@@ -22,18 +22,10 @@
 //= require_tree .
 
 
-$(document).ready(function () {
-  delay_masonry();
-  // load_posts();
-  // console.log(window.screen.width);
-});
 
 
-$(window).ready(function(){
-  load_posts();
-});
-
-$(window).reload(function(){
+$(document).on('page:update',function(){
+  console.log("page load")
   load_posts();
 });
 
@@ -60,5 +52,5 @@ function delay_masonry(){
 function load_posts(){
   $('#masonry-container').hide()
   delay_masonry();
-  $('#masonry-container').fadeIn(3000);
+  $('#masonry-container').fadeIn(1500);
 }
