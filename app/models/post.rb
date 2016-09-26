@@ -10,6 +10,9 @@ class Post < ActiveRecord::Base
 
   has_many :post_collections
 
+  has_many :tools
+  accepts_nested_attributes_for :tools, reject_if: :all_blank, allow_destroy: true
+  
   def do_like
     self.like += 1
     self.save

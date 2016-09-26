@@ -34,6 +34,13 @@
     = render 'disqus'
 
   .col-md-3
+    .thumbnail
+      %p.show_also_like 
+        %i.fa.fa-paint-brush
+        Tool
+      -@post.tools.each do |t|
+        %li 
+          =t.name
     .div
       %p.show_also_like You might also like:
       #random_post

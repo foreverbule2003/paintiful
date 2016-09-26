@@ -14,7 +14,7 @@ gem 'rails', '4.2.0'
 gem 'capybara'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
-
+gem 'cocoon'
 
 #Styling
 gem "font-awesome-rails"

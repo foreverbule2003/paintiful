@@ -1,16 +1,25 @@
 .container
   .col-md-12
-    .row
-      .panel.panel-warning
-        .panel-body
-          -if @post.image?
-            = image_tag @post.image.url(:small)
-          = simple_form_for @post do |f|
-            = f.input :title,  input_html: {class: "form-control"}
-            = f.input :description, input_html: {class: "form-control"}
+    .panel.panel-warning
+      .panel-body
+        -if @post.image?
+          = image_tag @post.image.url(:small)
+        = simple_form_for @post do |f|
+          .col-md-6
+            %h1 Post
+            = f.input :title, placeholder: 'Give me a title', input_html: {class: "form-control"}
+            = f.input :description, placeholder: "Give me some description", input_html: {class: "form-control"}
             = f.file_field :image, input_html: {class: "form-control"}
             = f.collection_radio_buttons :category_id, Category.all, :id, :name, {promt: "Choose a Category"}
-            %br
+          .col-md-6
+            %h1 
+              %i.fa.fa-paint-brush
+              Tool
+            = f.simple_fields_for :tools do |tool|
+              = render 'tool_fields', f: tool
+            .links
+              = link_to_add_association 'Add', f, :tools, class: "btn btn-primary col-md-12"
+          .col-md-12
             .form-actions
               = f.button :submit, input_html: {class: "form-control"}
 

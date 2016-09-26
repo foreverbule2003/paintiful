@@ -20,9 +20,18 @@
 //= require turbolinks
 //= require bootstrap/alert
 //= require_tree .
+//= require cocoon
+
+$(document).ready(function () {
+  // delay_masonry();
+  // load_posts();
+  // console.log(window.screen.width);
+});
 
 
-
+$(window).ready(function(){
+  // load_posts();
+});
 
 $(document).on('page:update',function(){
   console.log("page load")
@@ -52,5 +61,5 @@ function delay_masonry(){
 function load_posts(){
   $('#masonry-container').hide()
   delay_masonry();
-  $('#masonry-container').fadeIn(1500);
+  $('#masonry-container').fadeIn(3000);
 }
