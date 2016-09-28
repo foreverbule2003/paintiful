@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   mount RedactorRails::Engine => '/redactor_rails'
   devise_for :users, controllers: {
     session: "users/session",
-    confirmations: "users/confirmations"
+    confirmations: "users/confirmations",
+    :omniauth_callbacks => "users/omniauth_callbacks"
   }
+  # devise_for controllers: {  }
   resources :posts do
     member do 
       get 'like'

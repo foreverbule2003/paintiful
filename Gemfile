@@ -15,6 +15,7 @@ gem 'capybara'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'cocoon'
+gem 'omniauth-facebook'
 
 #Styling
 gem "font-awesome-rails"
