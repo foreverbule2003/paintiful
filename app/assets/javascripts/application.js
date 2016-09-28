@@ -22,15 +22,12 @@
 //= require_tree .
 //= require cocoon
 
-$(document).ready(function () {
-  // delay_masonry();
-  // load_posts();
-  // console.log(window.screen.width);
-});
-
-
-$(window).ready(function(){
-  // load_posts();
+$(document).on('page:change', function (e) {
+  if (window.location.hash && window.location.hash == '#_=_') {
+    window.location.hash = '';
+    history.pushState('', document.title, window.location.pathname); // nice and clean
+    e.preventDefault(); // no page reload
+  }
 });
 
 $(document).on('page:update',function(){
