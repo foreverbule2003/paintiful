@@ -27,5 +27,8 @@ module ApplicationHelper
     post.updated_at.strftime("%F %T")
   end
 
-
+  def render_navbar_say_hi_to_user
+    user = current_user.name || "User"
+    message = "Hi! #{user}"
+  end
 end

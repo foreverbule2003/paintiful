@@ -61,14 +61,37 @@ span.badge{
 /*navbar*/
 .navbar-default{
   background-color: lighten(#000, 65%);
-  padding-top: 0.5%;
-  padding-bottom: 0.5%;
+/*   padding-top: 0.5%;
+  padding-bottom: 0.5%; */
+  margin: 0;
+  padding: 0;
 }
 .navbar-brand{
-  font-size: 5rem;
+  font-size: 4rem;
   font-family: 'Lobster', cursive;
+
 }
 .navbar-nav > li > a{
+  font-size: 3rem;
+}
+.hi_user{
+  font-size: 3rem;
+  color: #777;
+  /* border-style: dashed; */
+  margin:0 auto;
+}
+.fa-cog{
+  font-size: 3rem;
+}
+.navbar-nav > li > .dropdown-menu{
+  background-color: lighten(#000, 65%);
+}
+
+/*user navbar click event*/
+default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: lighten(#000, 65%);
+}
+.dropdown-menu > li > a {
   font-size: 3rem;
 }
 
@@ -89,11 +112,11 @@ span.badge{
 #posts#index > .thumbnail{
   width: 100%;
 }
-.thumbnail:visited{
+.thumbnail#index:visited{
   -webkit-filter: drop-shadow(8px 8px 20px black);
   filter: drop-shadow(8px 8px 20px black);
 }
-.thumbnail:hover{
+.thumbnail#index:hover{
   -webkit-filter: drop-shadow(8px 8px 20px black);
   filter: drop-shadow(8px 8px 10px black);
 }
@@ -129,6 +152,15 @@ img.show_image{
 .random_post:hover{
   -webkit-filter: drop-shadow(8px 8px 20px black);
   filter: drop-shadow(8px 8px 10px black);
+}
+
+/*account*/
+#account_index p{
+  font-size: 3rem;
+}
+
+#account_index .say_hi{
+  font-size: 5rem;
 }
 
 /*footer*/

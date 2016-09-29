@@ -21,6 +21,7 @@
 //= require bootstrap/alert
 //= require_tree .
 //= require cocoon
+//= require bootstrap/dropdown
 
 $(document).on('page:change', function (e) {
   if (window.location.hash && window.location.hash == '#_=_') {

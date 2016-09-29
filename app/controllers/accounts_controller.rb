@@ -28,7 +28,9 @@ class AccountsController < ApplicationController
 
   def cancel_post
     @post = my_collection.post_collections.find_by_post_id(params[:id])
+    post_title = Post.find(params[:id]).title
     @post.destroy
     redirect_to :back
+    flash[:notice] = "#{I18n.t("controllers.accounts.cancel_post")} #{post_title}"
   end
 end

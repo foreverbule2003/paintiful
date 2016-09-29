@@ -7,3 +7,5 @@ zh-TW:
       add_to_collection:
         success: 收藏成功
         fail: 已經加入收藏
+    accounts:
+      cancel_post: 已經取消收藏

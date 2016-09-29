@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   }
   # devise_for controllers: {  }
   resources :posts do
+    resources :tools 
     member do 
       get 'like'
       post :add_to_collection

@@ -2,24 +2,21 @@
 %nav.navbar.navbar-default.navbar-fixed-top
   .container
     .navbar-header
-      %button.navbar-toggle{"data-target" => "#myNav", "data-toggle" => "collapse", :type => "button"}
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
       = link_to " Paintiful", root_path, class: "navbar-brand"
-
     #myNav.collapse.navbar-collapse
-      %ul.nav.navbar-nav
-      %ul.nav.navbar-nav.navbar-right
+      .nav.navbar-nav.navbar-right
         - if user_signed_in?
+          %li.hi_user
+            %a
+              =render_navbar_say_hi_to_user 
           %li
-            = link_to " New Post", new_post_path ,class: "fa fa-pencil-square-o"
-          %li
-            = link_to " Me", accounts_path, class: "fa fa-user"
-          %li
-            = link_to " Sign out", destroy_user_session_path, method: :delete, class: "fa fa-sign-out"
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => ""} 
+              %i.fa.fa-cog
+            %ul.dropdown-menu
+              %li= link_to " New Post", new_post_path ,class: "fa fa-pencil-square-o"
+              %li= link_to " My Profile", accounts_path, class: "fa fa-user"
+              %li= link_to " Sign out", destroy_user_session_path, method: :delete, class: "fa fa-sign-out"
         - else
-          %li
-            = link_to " Sign in", new_user_session_path, class: "fa fa-sign-in "
+          %li= link_to " Sign in", new_user_session_path, class: "fa fa-sign-in "
             
 
