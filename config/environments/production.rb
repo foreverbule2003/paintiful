@@ -62,6 +62,7 @@ Rails.application.configure do
   #config.assets.prefix = "/public/current/public/assets"
   #config.assets.prefix = "/current/app/assets"
 
+  config.action_mailer.default_url_options = { host: 'https://paintiful.herokuapp.com'}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     port: 587,
