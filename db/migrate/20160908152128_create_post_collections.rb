@@ -3,7 +3,7 @@ class CreatePostCollections < ActiveRecord::Migration
     create_table :post_collections do |t|
       t.integer :post_id
       t.timestamps null: false
-      t.remove :collection
+      # t.remove :collection
     end
     remove_column :post_collections, :collection 
   end
