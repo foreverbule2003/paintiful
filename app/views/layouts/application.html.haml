@@ -12,6 +12,10 @@
   %body.body
     .container
       =render 'common/navbar'
+      
+      -if Rails.env == "development" 
+        =I18n.default_locale 
+        
       .alert-info
         =notice_message
       =render 'common/nav_category'
@@ -19,7 +23,7 @@
     .container=yield
 
     .container
-      -# =render 'common/footer'
+      =render 'common/footer'
   
 
 

@@ -9,3 +9,6 @@ zh-TW:
         fail: 已經加入收藏
     accounts:
       cancel_post: 已經取消收藏
+  new_post: 新畫作
+  my_file: 我的檔案
+  sign_out: 登出

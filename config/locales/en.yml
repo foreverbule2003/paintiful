@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  new_post: "New Post"
+  my_file: "My Profile"
+  sign_out: "Sign Out"

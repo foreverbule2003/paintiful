@@ -1,3 +1,6 @@
 -# .container.div#footer
 .container-fluid#footer
+  %div
+    = link_to "中文版", set_locale_posts_path(locale: "zh-TW"), method: :post, class: "btn btn-primary"
+    = link_to "English", set_locale_posts_path(locale: "en"), method: :post, class: "btn btn-primary" 
   %h1.text-center Created by foreverbule2003
