@@ -1,10 +1,11 @@
+=@post.description
 .container-fluid#show
   -# .row
   .col-md-9.thumbnail.show
     = image_tag @post.image.url(:medium), class: "show_image"
     %p.show_title
       =@post.title
-    
+      
     %span.badge
       =@post.counter 
       %i.fa.fa-eye 
@@ -12,7 +13,6 @@
     %span.badge
       =@post.like
       %i.fa.fa-heart
-
     
     .show_description
       = simple_format(@post.description)#, class: "show_description"
