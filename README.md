@@ -8,9 +8,9 @@
   
 #@index
 Feature
-1. RWD (Responsive Web Design, 在不同解析度下改變網頁頁面的佈局排版，讓不同的設備都可以正常瀏覽同一網站，提供最佳的視覺體驗.)
-2. bootstrap (使用度最高的前端框架之一, 對 RWD 有很好的支援.)
-3. mansonry.js (Masonry 是一個 JavaScript 網格的 library. 他對排列頁面元素的位置有著優秀的能力, 如同砌磚頭那樣排列指定的頁面元素.)
+1. RWD (Responsive Web Design, 在不同解析度下改變網頁頁面的佈局排版，讓不同的設備都可以正常瀏覽同一網站，提供最佳的視覺體驗.)  
+2. bootstrap (使用度最高的前端框架之一, 對 RWD 有很好的支援.)  
+3. mansonry.js (Masonry 是一個 JavaScript 網格的 library, 他對排列頁面元素的位置有著優秀的能力, 如同砌磚頭那樣排列指定的頁面元素.)
 ![rwd.jpg](http://user-image.logdown.io/user/13777/blog/12993/post/895082/vsFZwJqKTQ277wcQIcYJ_rwd.jpg)
 
 #@show
