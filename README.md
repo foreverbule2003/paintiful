@@ -2,7 +2,7 @@
 
 ##Test account
 >
-user: aaa@bbb.com
+user: aaa@bbb.com  
 password: 123
   
 #@index
