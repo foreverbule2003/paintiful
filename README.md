@@ -14,7 +14,7 @@ Feature
 ![index.jpg](http://user-image.logdown.io/user/13777/blog/12993/post/895082/WBVi3IbTSoui7JyJNQ3t_index.jpg)
 
 #@show
-Feature
+Feature  
 1. Random post (展示隨機貼文)  
 2. like (對喜歡貼文按讚)  
 3. collect (收藏貼文, 可以在 My Profile中的 My collection看到)   
@@ -22,10 +22,10 @@ Feature
 
 ![show.jpg](http://user-image.logdown.io/user/13777/blog/12993/post/895082/bUhsuZlZSquYZuCgDCli_show.jpg)
 #User/ My Profile
-Feature
+Feature  
 1. FB or mail sing up(use mailgun to send confirm mail)  
 
-![signin.png](http://user-image.logdown.io/user/13777/blog/12993/post/895082/AxoRX4ZSe2lAbl3y7owg_signin.png)
+![signin.png](http://user-image.logdown.io/user/13777/blog/12993/post/895082/AxoRX4ZSe2lAbl3y7owg_signin.png)  
 2. ajax (使用 ajax 來載入貼文)  
 3. willpagnate(對貼文作分頁, 降低server負擔, 也同時避免頁面過於雜亂, 暫定1 post/page)  
 
