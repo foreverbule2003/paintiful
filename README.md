@@ -27,7 +27,7 @@ Feature
 
 ![signin.png](http://user-image.logdown.io/user/13777/blog/12993/post/895082/AxoRX4ZSe2lAbl3y7owg_signin.png)  
 2. ajax (使用 ajax 來載入貼文)  
-3. willpagnate(對貼文作分頁, 降低server負擔, 也同時避免頁面過於雜亂, 暫定1 post/page)  
+3. willpagnate(對貼文作分頁, 降低server負擔, 也同時避免頁面過於雜亂, (暫定1 post/page)  
 
 ![my_profile.jpg](http://user-image.logdown.io/user/13777/blog/12993/post/895082/tQK1g6IXSmyr9caqy51r_my_profile.jpg)
 
