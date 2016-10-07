@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  include Paintiful
   before_action :find_post, only: [:edit, :show, :update, :destroy, :like]
   def index
     @posts= Post.all.order("created_at DESC")
@@ -58,6 +59,11 @@ class PostsController < ApplicationController
     else
       flash[:warning] = I18n.t("controllers.posts.add_to_collection.fail")
     end
+    redirect_to :back
+  end
+
+  def set_locale
+    I18n.default_locale = (params[:locale])
     redirect_to :back
   end
 
