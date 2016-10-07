@@ -166,6 +166,24 @@ img.show_image{
 /*footer*/
 #footer{
   background-color: lighten(#000, 85.7%);
+  padding: 1%;
+  margin: 0 auto;
+}
+
+#lang .btn{
+  width: 100%;
+}
+#about .btn{
+  width: 100%;
+  
+}
+#footer p{
+  font-size: 2rem;
+  
+
+}
+#created_by{
+  margin: auto 0;
 }
 
 /*Fit iPad size*/

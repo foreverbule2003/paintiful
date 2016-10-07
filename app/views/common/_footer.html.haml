@@ -1,6 +1,22 @@
--# .container.div#footer
-.container-fluid#footer
-  %div
-    = link_to "中文版", set_locale_posts_path(locale: "zh-TW"), method: :post, class: "btn btn-primary"
-    = link_to "English", set_locale_posts_path(locale: "en"), method: :post, class: "btn btn-primary" 
-  %h1.text-center Created by foreverbule2003
+.container
+  .col-md-4
+    %p.text-center= t(:choice_lang)
+    .col-md-6#lang
+      = link_to "中文版", set_locale_posts_path(locale: "zh-TW"), method: :post, class: "btn btn-primary "
+    .col-md-6#lang   
+      = link_to "English", set_locale_posts_path(locale: "en"), method: :post, class: "btn btn-primary" 
+
+  .col-md-4
+    %p.text-center= t(:about)
+    .col-md-4#about
+      %a{ href: "https://foreverbule2003.github.io/",target: "_blank" } 
+        %i.fa.fa-home.btn.btn-default 
+    .col-md-4#about   
+      %a{ href: "https://github.com/foreverbule2003",target: "_blank" } 
+        %i.fa.fa-github.btn.btn-default
+    .col-md-4#about
+      %a{:href => "http://foreverbule2003.logdown.com/"}  
+        %i.fa.fa-pencil.btn.btn-default
+
+  .col-md-4
+    %p.text-center Created by foreverbule2003
