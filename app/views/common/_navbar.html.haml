@@ -23,4 +23,4 @@
               %li= link_to " #{t(:my_file)}", accounts_path, class: "fa fa-user"
               %li= link_to " #{t(:sign_out)}", destroy_user_session_path, method: :delete, class: "fa fa-sign-out"
         - else
-          %li= link_to " Sign in", new_user_session_path, class: "fa fa-sign-in "    
+          %li= link_to " #{t(:sign_in)}", new_user_session_path, class: "fa fa-sign-in "    
