@@ -9,6 +9,10 @@ Rails.application.routes.draw do
       get 'like'
       post :add_to_collection
     end
+    collection do
+      post :set_locale
+    end
+
   end
   resources :categorys
   root 'posts#index'
