@@ -153,6 +153,16 @@ img.show_image{
   -webkit-filter: drop-shadow(8px 8px 20px black);
   filter: drop-shadow(8px 8px 10px black);
 }
+i#title{
+  font-size: 3rem;
+}
+#tool p{
+  font-size: 2rem;
+}  
+
+#tool hr{
+  margin: 0;
+}
 
 /*account*/
 #account_index p{
@@ -175,7 +185,7 @@ img.show_image{
 }
 #about .btn{
   width: 100%;
-  
+
 }
 #footer p{
   font-size: 2rem;
