@@ -2,40 +2,39 @@
   .col-md-12
     .panel.panel-warning
       .panel-body
-        = simple_form_for @post do |f|
-          .col-md-6
-            
-            = f.input :title, placeholder: 'Give me a title', input_html: {class: "form-control"}
-            = f.input :description, placeholder: "Give me some description", input_html: {class: "form-control"}
-            = f.collection_radio_buttons :category_id, Category.all, :id, :name, {promt: "Choose a Category"}, input_html: {class: "form-control"}
-          .col-md-6
-            -if @post.image?
-              = image_tag @post.image.url(:small)
-              = f.file_field :image, input_html: {class: "form-control"}
-
-            -else
-              %div#no_image
-                = f.file_field :image, input_html: {class: "form-control"}
+        = bootstrap_form_for @post do |f|
           .col-md-12
+            = f.text_field :title, placeholder: 'Give me a title'
+
+          .col-md-7
+            = f.text_area :description, placeholder: "Give me some description, max 150 words"
             %h1 Tool
             = f.simple_fields_for :tools do |tool|
 
               = render 'tool_fields', f: tool
             .links
-              = link_to_add_association 'Add', f, :tools, class: "btn btn-default pull-left col-md-1"
+              = link_to_add_association 'Add', f, :tools, class: "btn btn-default pull-left "
+            
+          .col-md-5
+            -if @post.image?
+              = image_tag @post.image.url(:small)
+              = f.file_field :image
+            -else
+              %div#no_image
+                = f.file_field :image
+            = f.collection_radio_buttons :category_id, Category.all, :id, :name, {promt: "Choose a Category"}
 
           .col-md-12
             %h1 Step
             = f.simple_fields_for :steps do |step|
               =render 'step_fields', f: step
             .links
-              = link_to_add_association 'Add', f, :steps, class: "btn btn-default pull-left col-md-1"
-               
-          .col-md-10.col-md-offset-1
+              = link_to_add_association 'Add', f, :steps, class: "btn btn-default pull-left"
+          
+          .col-md-12     
+            %hr/
             .form-actions
-
-              %hr/
-              = f.button :submit, input_html: {class: "form-control"}
+              = f.submit class: "btn btn-primary"
 
 
 

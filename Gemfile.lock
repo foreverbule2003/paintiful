@@ -72,6 +72,7 @@ GEM
       sass (>= 3.3.0)
     bootstrap-will_paginate (0.0.10)
       will_paginate
+    bootstrap_form (2.5.0)
     builder (3.2.2)
     byebug (1.1.1)
       columnize (~> 0.3.6)
@@ -319,6 +320,7 @@ DEPENDENCIES
   aws-sdk (< 2.0)
   bootstrap-sass (~> 3.3.5)
   bootstrap-will_paginate
+  bootstrap_form
   byebug (~> 1.1.1)
   capistrano
   capistrano-bundler
