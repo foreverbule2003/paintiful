@@ -9,20 +9,23 @@
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
 
 
-  %body.body
+  %body
     .container
-      =render 'common/navbar'
+    =render 'common/navbar'
+    
+    -if Rails.env == "development" 
+      %p=I18n.default_locale 
+      %p=params        
+    
+    .alert-info
+      =notice_message
       
-      -if Rails.env == "development" 
-        =I18n.default_locale 
-        
-      .alert-info
-        =notice_message
+    .container
       =render 'common/nav_category'
+      =yield
 
-    .container=yield
-  #footer
-    =render 'common/footer'
+    #footer
+      =render 'common/footer'
   
 
 
