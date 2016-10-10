@@ -11,7 +11,7 @@
 }
 
 
-.body{
+body{
 
   background-color: lighten(#000, 75.7%);
   padding-top: 70px;
@@ -126,6 +126,15 @@ default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, 
 /*show*/
 img.show_image{
   max-width: 100%;
+}
+#no_image{
+  border-style: dashed;
+  height: 200px;
+}
+#no_image p{
+  /* display: flex; */
+  text-align: center;
+  line-height: 200px;
 }
 #other_random_post{
   margin-top: 10%;

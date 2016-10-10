@@ -2,35 +2,38 @@
   .col-md-12
     .panel.panel-warning
       .panel-body
-        -if @post.image?
-          = image_tag @post.image.url(:small)
         = simple_form_for @post do |f|
-          .col-md-8.col-md-offset-2
-            %h1 Post
-            = f.file_field :image, input_html: {class: "form-control"}
-            %hr/
+          .col-md-6
+            
             = f.input :title, placeholder: 'Give me a title', input_html: {class: "form-control"}
             = f.input :description, placeholder: "Give me some description", input_html: {class: "form-control"}
             = f.collection_radio_buttons :category_id, Category.all, :id, :name, {promt: "Choose a Category"}, input_html: {class: "form-control"}
-          .col-md-8.col-md-offset-2
-            %h1 
-              %i.fa.fa-paint-brush
-              Tool
+          .col-md-6
+            -if @post.image?
+              = image_tag @post.image.url(:small)
+              = f.file_field :image, input_html: {class: "form-control"}
+
+            -else
+              %div#no_image
+                = f.file_field :image, input_html: {class: "form-control"}
+          .col-md-12
+            %h1 Tool
             = f.simple_fields_for :tools do |tool|
 
               = render 'tool_fields', f: tool
             .links
-              = link_to_add_association 'Add', f, :tools, class: "btn btn-primary pull-left col-md-1"
+              = link_to_add_association 'Add', f, :tools, class: "btn btn-default pull-left col-md-1"
 
-          .col-md-8.col-md-offset-2
+          .col-md-12
             %h1 Step
             = f.simple_fields_for :steps do |step|
               =render 'step_fields', f: step
             .links
-              = link_to_add_association 'Add', f, :steps, class: "btn btn-primary pull-left col-md-1"
+              = link_to_add_association 'Add', f, :steps, class: "btn btn-default pull-left col-md-1"
                
-          .col-md-8.col-md-offset-2
+          .col-md-10.col-md-offset-1
             .form-actions
+
               %hr/
               = f.button :submit, input_html: {class: "form-control"}
 
