@@ -1,39 +1,38 @@
 .container
-  .col-md-12
-    .panel.panel-warning
-      .panel-body
-        = bootstrap_form_for @post do |f|
-          .col-md-12
-            = f.text_field :title, placeholder: 'Give me a title'
+  .panel.panel-warning
+    .panel-body
+      = bootstrap_form_for @post do |f|
+        .col-md-12
+          = f.text_field :title, placeholder: 'Give me a title'
 
-          .col-md-7
-            = f.text_area :description, placeholder: "Give me some description, max 150 words"
-            %h1 Tool
-            = f.simple_fields_for :tools do |tool|
-
-              = render 'tool_fields', f: tool
-            .links
-              = link_to_add_association 'Add', f, :tools, class: "btn btn-default pull-left "
-            
-          .col-md-5
-            -if @post.image?
-              = image_tag @post.image.url(:small)
-              = f.file_field :image
-            -else
-              %div#no_image
-                = f.file_field :image
-            = f.collection_radio_buttons :category_id, Category.all, :id, :name, {promt: "Choose a Category"}
-
-          .col-md-12
-            %h1 Step
-            = f.simple_fields_for :steps do |step|
-              =render 'step_fields', f: step
-            .links
-              = link_to_add_association 'Add', f, :steps, class: "btn btn-default pull-left"
+        .col-md-7
+          = f.text_area :description, placeholder: "Give me some description, max 150 words"
+          %h1 Tool
+          = f.simple_fields_for :tools do |tool|
+            = render 'tool_fields', f: tool
+          .links
+            = link_to_add_association 'Add', f, :tools, class: "btn btn-default pull-left "
           
-          .col-md-12     
-            %hr/
-            .form-actions
-              = f.submit class: "btn btn-primary"
+        .col-md-5
+          -if @post.image?
+            = image_tag @post.image.url(:small)
+            = f.file_field :image
+          -else
+            %div#no_image
+              = f.file_field :image
+
+          = f.collection_radio_buttons :category_id, Category.all, :id, :name, {promt: "Choose a Category"}
+
+        .col-md-12
+          %h1 Step
+          = f.simple_fields_for :steps do |step|
+            =render 'step_fields', f: step
+          .links
+            = link_to_add_association 'Add', f, :steps, class: "btn btn-default pull-left"
+        
+        .col-md-12     
+          %hr/
+          .form-actions
+            = f.submit class: "btn btn-primary", data: {disable_with: "Submitting..."}
 
 

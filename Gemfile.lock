@@ -100,6 +100,12 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    carrierwave (0.11.2)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
+      mimemagic (>= 0.3.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.7)
@@ -278,6 +284,10 @@ GEM
     simple_form (3.2.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
+    simple_form_fancy_uploads (0.2.0)
+      carrierwave
+      rails (>= 4.0.0)
+      simple_form (~> 3.1)
     slop (3.6.0)
     spring (1.4.0)
     sprockets (3.4.0)
@@ -351,6 +361,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   simple_form
+  simple_form_fancy_uploads
   spring
   turbolinks
   uglifier (>= 1.3.0)
