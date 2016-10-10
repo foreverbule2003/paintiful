@@ -8,12 +8,12 @@ class Post < ActiveRecord::Base
   
   scope :recent, -> { order("created_at DESC") }
 
-  has_many :post_collections
+  has_many :post_collections, dependent: :destroy
 
-  has_many :tools
+  has_many :tools, dependent: :destroy
   accepts_nested_attributes_for :tools, reject_if: :all_blank, allow_destroy: true
 
-  has_many :steps
+  has_many :steps, dependent: :destroy
   accepts_nested_attributes_for :steps, reject_if: :all_blank, allow_destroy: true
 
   def do_like
