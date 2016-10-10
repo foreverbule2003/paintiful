@@ -18,6 +18,7 @@ gem 'cocoon'
 gem 'omniauth-facebook'
 
 #Styling
+gem 'bootstrap_form'
 gem "font-awesome-rails"
 gem 'imagesLoaded_rails'
 gem 'masonry-rails', '~> 0.2.1'

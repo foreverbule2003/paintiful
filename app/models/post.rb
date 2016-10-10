@@ -3,8 +3,8 @@ class Post < ActiveRecord::Base
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
   belongs_to :category
   belongs_to :user
-  validates :title, presence: true
-  validates :description, length: { maximum: 140 }
+  validates :title, presence: true, length: { maximum: 150 }
+  validates :description, length: { maximum: 150 }
   
   scope :recent, -> { order("created_at DESC") }
 
