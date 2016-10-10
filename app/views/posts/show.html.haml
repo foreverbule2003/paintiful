@@ -3,8 +3,6 @@
   -# .row
   .col-md-9.thumbnail.show
     = image_tag @post.image.url(:medium), class: "show_image"
-    %p.show_title
-      =@post.title
       
     %span.badge
       =@post.counter 
@@ -13,10 +11,17 @@
     %span.badge
       =@post.like
       %i.fa.fa-heart
+
+    %p.show_title
+      =@post.title
     
     .show_description
       = simple_format(@post.description)#, class: "show_description"
 
+    -@post.steps.each.with_index do |step, index|
+      %div= "#{index + 1}. #{step.description}"
+      %hr/
+      
     .btn-group.btn-group-lg
       .btn.btn-default.i.fa.fa-heart.btn.btn-lg
         = link_to "Like", like_post_path(@post, title: "Like"), method: :get
@@ -29,8 +34,7 @@
           = link_to "Edit", edit_post_path(@post)
         .btn.btn-default
           = link_to "Delete", post_path(@post),method: :delete,data:{confirm: "Are you sure?"}
-        
-      
+         
     = render 'disqus'
 
   .col-md-3#tool
