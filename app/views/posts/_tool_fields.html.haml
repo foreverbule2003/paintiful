@@ -1,5 +1,7 @@
 .nested-fields
-  = link_to_remove_association f, class: "btn btn-danger pull-right" do 
+  = link_to_remove_association f, class: "btn btn-danger col-md-1 pull-left" do 
     %i.fa.fa-times
-  .col-md-11  
+
+  .col-md-11 
     = f.input :name, placeholder: "What is tool you use?", label: false, input_html: {class: "form-control"}
+    %hr/
