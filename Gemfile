@@ -8,7 +8,6 @@ gem 'factory_girl_rails'
 gem 'figaro'
 # Use postgresql as the database for Active Record
 gem 'pg'
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 gem 'capybara'
 gem 'will_paginate'
@@ -48,11 +47,11 @@ gem 'byebug', '~> 1.1.1'
 gem 'spring'
 gem 'pry-byebug'
 
-group: :development do 
+group :development do 
   gem 'web-console', '~> 2.0'
 end
 
-end
+
 
 
 #Deploy
