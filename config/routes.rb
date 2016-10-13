@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  mount RedactorRails::Engine => '/redactor_rails'
   devise_for :users, controllers: {
     session: "users/session",
     confirmations: "users/confirmations",

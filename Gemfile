@@ -8,7 +8,6 @@ gem 'factory_girl_rails'
 gem 'figaro'
 # Use postgresql as the database for Active Record
 gem 'pg'
-gem 'redactor-rails', github: "kausters/redactor-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 gem 'capybara'
@@ -18,7 +17,6 @@ gem 'cocoon'
 gem 'omniauth-facebook'
 
 #Styling
-gem 'simple_form_fancy_uploads'
 gem 'bootstrap_form'
 gem "font-awesome-rails"
 gem 'imagesLoaded_rails'
