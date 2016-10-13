@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  include Paintiful
   before_action :find_post, only: [:edit, :show, :update, :destroy, :like]
+  before_action :authneticate_user, only: [:new, :create, :edit, :update,:destroy]
   def index
     @posts= Post.all.order("created_at DESC")
   end
