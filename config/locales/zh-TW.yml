@@ -7,6 +7,9 @@ zh-TW:
       add_to_collection:
         success: 收藏成功
         fail: 已經加入收藏
+      edit:
+        you_are_not_author: 你不是作者, 無法編輯  
+
     accounts:
       cancel_post: 已經取消收藏
   new_post: 新畫作

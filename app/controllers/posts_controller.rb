@@ -1,7 +1,16 @@
 class PostsController < ApplicationController
+<<<<<<< HEAD
+  include ApplicationHelper
   before_action :find_post, only: [:edit, :show, :update, :destroy, :like]
+  # before_action :authenticate_user, only: [:new, :create, :edit, :update,:destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update,:destroy]
+
+=======
+  before_action :find_post, only: [:edit, :show, :update, :destroy, :like]
+  # before_action :authenticate_user, only: [:new, :create, :edit, :update,:destroy]
+>>>>>>> 8293081... merge commit
   def index
-    @posts= Post.all.order("created_at DESC")
+    @posts= Post.all.recent
   end
 
   def new
@@ -10,7 +19,6 @@ class PostsController < ApplicationController
 
   def create
     @post= current_user.posts.build(post_params)
-
     if @post.save
       redirect_to @post
       flash[:notice] = I18n.t("controllers.posts.create")
@@ -26,7 +34,10 @@ class PostsController < ApplicationController
   end
 
   def edit
-    
+    unless is_author?(@post)
+      redirect_to post_path(@post)
+      flash[:alert] = I18n.t("controllers.posts.edit.you_are_not_author")
+    end
   end
 
   def update
@@ -47,12 +58,11 @@ class PostsController < ApplicationController
   def like
     @post.do_like
     redirect_to :back
-    # go_back
   end
 
   def add_to_collection
     @post = Post.find(params[:id])
-    if !my_collection.posts.include?(@post)
+    unless my_collection.posts.include?(@post)
       my_collection.add_post_to_collection(@post)   
       flash[:notice] = I18n.t("controllers.posts.add_to_collection.success")
     else

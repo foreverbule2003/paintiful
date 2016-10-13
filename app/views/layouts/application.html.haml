@@ -16,6 +16,13 @@
     
       -if Rails.env == "development" 
         %p=I18n.default_locale 
+        %p=params    
+        -if user_signed_in?     
+          %p="current user: #{current_user.name}"
+          -unless @post.nil?
+            %p="post user: #{@post.user.name}"
+
+      =notice_message
         %p=params        
         %p=yield(:title).nil?
         
@@ -24,7 +31,6 @@
       .alert-info
         =notice_message
       
-    .container
       =render 'common/nav_category'
       =yield
 

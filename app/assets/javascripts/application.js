@@ -22,6 +22,7 @@
 //= require_tree .
 //= require cocoon
 //= require bootstrap/dropdown
+Turbolinks.enableProgressBar();
 
 $(document).on('page:change', function (e) {
   if (window.location.hash && window.location.hash == '#_=_') {
@@ -32,12 +33,13 @@ $(document).on('page:change', function (e) {
 });
 
 $(document).on('page:update',function(){
-  console.log("page load")
+  console.log("page load");
   load_posts();
 });
 
+
 $(window).resize(function () {
-  masonry();
+  load_posts();
 });
 
 
@@ -59,5 +61,5 @@ function delay_masonry(){
 function load_posts(){
   $('#masonry-container').hide()
   delay_masonry();
-  $('#masonry-container').fadeIn(3000);
+  $('#masonry-container').fadeIn(2500);
 }
