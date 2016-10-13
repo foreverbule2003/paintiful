@@ -8,7 +8,6 @@ gem 'factory_girl_rails'
 gem 'figaro'
 # Use postgresql as the database for Active Record
 gem 'pg'
-
 gem 'rails', '4.2.0'
 gem 'capybara'
 gem 'will_paginate'
