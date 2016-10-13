@@ -1,5 +1,6 @@
+-content_for :title, @post.title 
+      
 .container-fluid#show
-  -# .row
   .col-md-9.thumbnail.show
     = image_tag @post.image.url(:medium), class: "show_image"
       
