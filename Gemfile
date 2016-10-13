@@ -8,8 +8,6 @@ gem 'factory_girl_rails'
 gem 'figaro'
 # Use postgresql as the database for Active Record
 gem 'pg'
-gem 'redactor-rails', github: "kausters/redactor-rails"
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 gem 'capybara'
 gem 'will_paginate'
@@ -18,7 +16,6 @@ gem 'cocoon'
 gem 'omniauth-facebook'
 
 #Styling
-gem 'simple_form_fancy_uploads'
 gem 'bootstrap_form'
 gem "font-awesome-rails"
 gem 'imagesLoaded_rails'
@@ -46,10 +43,16 @@ gem 'jbuilder', '~> 2.0'
 gem 'awesome_rails_console'
 gem 'byebug', '~> 1.1.1'
 # Access an IRB console on exception pages or by using <%= console %> in views
-gem 'web-console', '~> 2.0'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring'
 gem 'pry-byebug'
+
+group :development do 
+  gem 'web-console', '~> 2.0'
+end
+
+
+
 
 #Deploy
   #heroku

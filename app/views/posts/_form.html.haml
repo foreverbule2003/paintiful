@@ -5,7 +5,7 @@
         .col-md-12
           = f.text_field :title, placeholder: 'Give me a title'
 
-        .col-md-7
+        .col-md-7#tool
           = f.text_area :description, placeholder: "Give me some description, max 150 words"
           %h1 Tool
           = f.simple_fields_for :tools do |tool|
@@ -13,7 +13,7 @@
           .links
             = link_to_add_association 'Add', f, :tools, class: "btn btn-default pull-left "
           
-        .col-md-5
+        .col-md-5#post_image
           -if @post.image?
             = image_tag @post.image.url(:small)
             = f.file_field :image
@@ -23,7 +23,7 @@
 
           = f.collection_radio_buttons :category_id, Category.all, :id, :name, {promt: "Choose a Category"}
 
-        .col-md-12
+        .col-md-12#step
           %h1 Step
           = f.simple_fields_for :steps do |step|
             =render 'step_fields', f: step
