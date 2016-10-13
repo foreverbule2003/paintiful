@@ -17,7 +17,13 @@ module ApplicationHelper
     alerts.join("\n").html_safe
   end
 
-
+  def render_title(title_content)
+    if (title_content.length <= 0)
+      Paintiful 
+    else
+      "Paintiful | #{title_content}"
+    end
+  end
 
   
   def render_post_created_time(post)

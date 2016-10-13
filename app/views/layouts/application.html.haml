@@ -2,7 +2,8 @@
 %html
   %head
     %title
-      Paintiful
+      =render_title(yield(:title))
+ 
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
@@ -16,7 +17,10 @@
       -if Rails.env == "development" 
         %p=I18n.default_locale 
         %p=params        
-    
+        %p=yield(:title).nil?
+        
+        =1
+
       .alert-info
         =notice_message
       
