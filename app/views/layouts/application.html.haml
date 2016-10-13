@@ -24,14 +24,13 @@
 
       =notice_message
 
-
-      
       =render 'common/navbar'
       
       -if Rails.env == "development" 
         =I18n.default_locale 
         
         =notice_message
+
 
       =render 'common/nav_category'
       =yield

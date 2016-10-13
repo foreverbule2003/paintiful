@@ -15,7 +15,6 @@ gem 'turbolinks','2.5.3'
 #Styling
 # gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'bootstrap-sass', '~> 3.3.5'
-gem 'simple_form_fancy_uploads'
 gem 'bootstrap_form'
 gem "font-awesome-rails"
 gem 'imagesLoaded_rails'
@@ -38,10 +37,6 @@ gem 'byebug', '~> 1.1.1'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring'
 gem 'pry-byebug'
-group: :developmen do 
-  gem 'web-console', '~> 2.0'
-end
-
 
 group :development do 
   gem 'web-console', '~> 2.0'
@@ -50,7 +45,6 @@ end
 
 
 
-<<<<<<< HEAD
 group :development do 
   gem 'web-console', '~> 2.0'
 end
@@ -68,8 +62,25 @@ end
 
 
 
-=======
->>>>>>> 7d5e287... f19a
+
+group :development do 
+  gem 'web-console', '~> 2.0'
+end
+group :test do 
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+end
+
+
+group :development do 
+  gem 'web-console', '~> 2.0'
+end
+
+
+
+
+
 #Deploy
   #heroku
 gem 'rails_12factor'

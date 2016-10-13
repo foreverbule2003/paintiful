@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
+  include ApplicationHelper
   before_action :find_post, only: [:edit, :show, :update, :destroy, :like]
+  # before_action :authenticate_user, only: [:new, :create, :edit, :update,:destroy]
   def index
     @posts= Post.all.recent
   end
