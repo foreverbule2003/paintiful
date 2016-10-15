@@ -46,7 +46,6 @@ end
 
 
 
-<<<<<<< HEAD
 group :development do 
   gem 'web-console', '~> 2.0'
 end
@@ -83,8 +82,6 @@ end
 
 
 
-=======
->>>>>>> 0b1d936... f19a
 #Deploy
   #heroku
 gem 'rails_12factor'
