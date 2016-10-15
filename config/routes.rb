@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
-  mount RedactorRails::Engine => '/redactor_rails'
   devise_for :users, controllers: {
     session: "users/session",
     confirmations: "users/confirmations",
     :omniauth_callbacks => "users/omniauth_callbacks"
   }
-  # devise_for controllers: {  }
   resources :posts do
     resources :tools 
     member do 
@@ -29,7 +27,5 @@ Rails.application.routes.draw do
       delete :cancel_post
     end
   end
-  # get 'accounts/my_posts' => 'accounts#my_posts'
-  # get 'accounts/' => 'accounts#my_collections'
 
 end

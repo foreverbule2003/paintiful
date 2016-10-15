@@ -1,5 +1,7 @@
+-content_for :title, @post.title 
+
+      
 .container-fluid#show
-  -# .row
   .col-md-9.thumbnail.show
     = image_tag @post.image.url(:medium), class: "show_image"
       
@@ -21,18 +23,8 @@
       %div= "#{index + 1}. #{step.description}"
       %hr/
       
-    .btn-group.btn-group-lg
-      .btn.btn-default.i.fa.fa-heart.btn.btn-lg
-        = link_to "Like", like_post_path(@post, title: "Like"), method: :get
+    =render 'show_gp_btn', post: @post
 
-      - if user_signed_in?
-        .btn.btn-default.btn.btn-lg
-          = link_to add_to_collection_post_path(@post), method: :post do
-            %i.fa.fa-archive Collect
-        .btn.btn-default
-          = link_to "Edit", edit_post_path(@post)
-        .btn.btn-default
-          = link_to "Delete", post_path(@post),method: :delete,data:{confirm: "Are you sure?"}
          
     = render 'disqus'
 

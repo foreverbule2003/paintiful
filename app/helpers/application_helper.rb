@@ -1,5 +1,4 @@
 module ApplicationHelper
-  include Paintiful
 
   def notice_message
     alert_types = { notice: :success, alert: :danger}
@@ -11,14 +10,22 @@ module ApplicationHelper
       alert_content = close_button + message
       alert_type = alert_types[type.to_sym] || message
       alert_class = "alert alert-#{alert_type} alert-dismissable"
-
       content_tag(:div, alert_content, class: alert_class)
     end
     alerts.join("\n").html_safe
   end
 
+  def render_title(title_content)
+    if (title_content.length <= 0)
+      Paintiful 
+    else
+      "Paintiful | #{title_content}"
+    end
+  end
 
-
+  def is_author?(post)
+    current_user.id == post.user.id
+  end
   
   def render_post_created_time(post)
     post.created_at.strftime("%F %T")

@@ -1,18 +1,23 @@
 @import "bootstrap";
 @import "bootstrap-sprockets";
-
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import "rails_bootstrap_forms";
+
+
 .table img{
   max-width: 100%;
 }
 
 
 body{
+
+  /* margin: 0; */
+  margin-bottom: 2%;
+}
 
   background-color: lighten(#000, 75.7%);
   padding-top: 70px;
@@ -201,6 +206,7 @@ i#title{
 #about .btn{
   width: 100%;
 
+  
 }
 #footer p{
   font-size: 2rem;
