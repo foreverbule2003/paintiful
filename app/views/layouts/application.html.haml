@@ -11,9 +11,9 @@
 
 
   %body
+
     =render 'common/navbar'
     .container
-    
       -if Rails.env == "development" 
         %p=I18n.default_locale 
         %p=params    
@@ -23,14 +23,16 @@
             %p="post user: #{@post.user.name}"
 
       =notice_message
-        %p=params        
-        %p=yield(:title).nil?
-        
-        =1
 
-      .alert-info
-        =notice_message
+
       
+      =render 'common/navbar'
+      
+      -if Rails.env == "development" 
+        =I18n.default_locale 
+        
+        =notice_message
+
       =render 'common/nav_category'
       =yield
 

@@ -1,5 +1,5 @@
 -content_for :title, @post.title 
-      
+
 .container-fluid#show
   .col-md-9.thumbnail.show
     = image_tag @post.image.url(:medium), class: "show_image"
@@ -23,6 +23,7 @@
       %hr/
       
     =render 'show_gp_btn', post: @post
+
          
     = render 'disqus'
 

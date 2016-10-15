@@ -1,21 +1,17 @@
 @import "bootstrap";
 @import "bootstrap-sprockets";
-
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import "rails_bootstrap_forms";
-
-
 .table img{
   max-width: 100%;
 }
 
 
 body{
-.form-control{
   /* margin: 0; */
   margin-bottom: 2%;
 }

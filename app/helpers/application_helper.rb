@@ -1,4 +1,5 @@
 module ApplicationHelper
+  include Paintiful
 
   def notice_message
     alert_types = { notice: :success, alert: :danger}
@@ -23,9 +24,11 @@ module ApplicationHelper
     end
   end
 
+
   def is_author?(post)
     current_user.id == post.user.id
   end
+
 
   
   def render_post_created_time(post)

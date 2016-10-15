@@ -13,6 +13,7 @@
           .links
             = link_to_add_association 'Add', f, :tools, class: "btn btn-default pull-left "
           
+<<<<<<< HEAD
         .col-md-5#post_image
           -if @post.image?
             = image_tag @post.image.url(:small)
@@ -34,5 +35,3 @@
           %hr/
           .form-actions
             = f.submit class: "btn btn-primary", data: {disable_with: "Submitting..."}
-
-

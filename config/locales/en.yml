@@ -38,3 +38,5 @@ en:
         fail: 已經加入收藏
       edit:
         you_are_not_author: You're not author  
+  choice_lang: "Choice Language"
+  about: "About"
