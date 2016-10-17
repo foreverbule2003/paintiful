@@ -1,0 +1,8 @@
+.col-md-12
+  .col-md-8.col-md-offset-2
+    =bootstrap_form_tag url: do_search_posts_path, method: :post do |f|
+      .col-md-10
+        =f.text_field :search, hide_label: true, placeholder: "Looking at something beautiful?"
+      .col-md-2  
+        =f.submit "Search", class: "btn btn-primary"         
+           

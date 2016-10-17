@@ -4,18 +4,15 @@ class Post < ActiveRecord::Base
   belongs_to :category
   belongs_to :user
   validates :title, presence: true, length: { maximum: 150 }
-  validates :description, length: { maximum: 150 }
-  
+  validates :description, length: { maximum: 150 }  
   scope :recent, -> { order("created_at DESC") }
-
   has_many :post_collections, dependent: :destroy
-
   has_many :tools, dependent: :destroy
   accepts_nested_attributes_for :tools, reject_if: :all_blank, allow_destroy: true
-
   has_many :steps, dependent: :destroy
   accepts_nested_attributes_for :steps, reject_if: :all_blank, allow_destroy: true
-
+  searchkick
+  
   def do_like
     self.like += 1
     self.save

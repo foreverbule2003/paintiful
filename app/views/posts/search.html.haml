@@ -1,0 +1,10 @@
+%p.text-center 
+  ="We find out #{@posts.size} resoult, Here is your search result:"
+#masonry-container.transitions-enabled.infinite-scroll.clearfix
+  #post_index
+    -@posts.each do |post|
+      =render 'common/post', post: post
+
+
+
+
