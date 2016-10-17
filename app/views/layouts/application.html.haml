@@ -9,40 +9,14 @@
     = csrf_meta_tags
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
 
-
   %body
-
     =render 'common/navbar'
     .container
-      -if Rails.env == "development" 
-        %p=I18n.default_locale 
-        %p=params    
-        -if user_signed_in?     
-          %p="current user: #{current_user.name}"
-          -unless @post.nil?
-            %p="post user: #{@post.user.name}"
-
-      =notice_message
-
-
-
-
-
-        
-
-      
-      =render 'common/navbar'
-      
-      -if Rails.env == "development" 
-        =I18n.default_locale 
-        
-        =notice_message
-
-
-
+      =render 'common/notice_msg'
+      =render 'common/search'
+      =render 'common/debug_params'
       =render 'common/nav_category'
       =yield
-
     #footer
       =render 'common/footer'
 

@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
+  include ApplicationHelper
+
   before_action :find_post, only: [:edit, :show, :update, :destroy, :like]
-  # before_action :authenticate_user, only: [:new, :create, :edit, :update,:destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update,:destroy]
+
   def index
     @posts= Post.all.recent
   end
@@ -8,7 +11,6 @@ class PostsController < ApplicationController
   def new
     @post= current_user.posts.build
   end
-
   def create
     @post= current_user.posts.build(post_params)
     if @post.save
@@ -66,6 +68,11 @@ class PostsController < ApplicationController
   def set_locale
     I18n.default_locale = (params[:locale])
     redirect_to :back
+  end
+
+  def do_search
+    @posts = Post.search params[:search], limit: 1000
+    render 'search' 
   end
 
   private

@@ -12,7 +12,9 @@ gem 'bootstrap-will_paginate'
 gem 'cocoon'
 gem 'omniauth-facebook'
 gem 'turbolinks','2.5.3'
-
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+gem 'searchkick'
 #Styling
 # gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'bootstrap-sass', '~> 3.3.5'
