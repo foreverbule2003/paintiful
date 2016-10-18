@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     end
     collection do
       post :set_locale
-      post :do_search
+      post :search
     end
 
   end

@@ -70,7 +70,7 @@ class PostsController < ApplicationController
     redirect_to :back
   end
 
-  def do_search
+  def search
     @posts = Post.search params[:search], limit: 1000
     render 'search' 
   end
