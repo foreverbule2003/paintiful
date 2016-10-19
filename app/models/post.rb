@@ -13,7 +13,7 @@ class Post < ActiveRecord::Base
   accepts_nested_attributes_for :steps, reject_if: :all_blank, allow_destroy: true
   searchkick
   acts_as_votable
-  
+  #test  
   def do_like
     self.like += 1
     self.save
