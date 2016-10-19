@@ -1,9 +1,9 @@
 .btn-group.btn-group-lg
-  .btn.btn-default.i.fa.fa-heart.btn.btn-lg
-    = link_to "Like", like_post_path(@post, title: "Like"), method: :get
-    
   - if user_signed_in?
     .btn.btn-default.btn.btn-lg
+      = link_to like_post_path(@post, title: "Like"), method: :get do
+        =render 'common/like_btn', post: post
+    .btn.btn-default.btn.btn-lg   
       = link_to add_to_collection_post_path(@post), method: :post do
         %i.fa.fa-archive Collect
     -if current_user.id == @post.user.id

@@ -1,0 +1,4 @@
+- unless current_user.voted_for? post 
+  %i.fa.fa-heart &nbsp; Like
+- else
+  %i.fa.fa-heart#like &nbsp; Dislike

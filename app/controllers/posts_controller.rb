@@ -50,7 +50,12 @@ class PostsController < ApplicationController
   end
 
   def like
-    @post.do_like
+    unless current_user.voted_for? @post 
+      @post.liked_by current_user
+      flash[:notice] = "You give #{@post.title} a like :)"
+    else 
+      @post.unliked_by current_user
+    end
     redirect_to :back
   end
 
