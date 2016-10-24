@@ -20,12 +20,7 @@ RSpec.describe User, type: :model do
     expect(user_empty_email).not_to be_valid
   end
 
-  it 'have many posts' do 
-    expect(@post.title).to eq("created by @user")
-  end
-
-  it 'destroy associated post' do
-    expect { @user.destroy! }.to change { Post.count }.by(-1)
-  end
+  it { should have_many :posts}
+  it { should validate_presence_of :email}
 
 end

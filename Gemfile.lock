@@ -277,6 +277,8 @@ GEM
       activemodel
       elasticsearch (>= 1)
       hashie
+    shoulda-matchers (3.1.1)
+      activesupport (>= 4.0.0)
     simple_form (3.2.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -354,6 +356,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   searchkick
+  shoulda-matchers (~> 3.1)
   simple_form (= 3.2.0)
   spring
   turbolinks (= 2.5.3)

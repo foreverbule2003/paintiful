@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   include ApplicationHelper
 
-  before_action :find_post, only: [:edit, :show, :update, :destroy, :like]
+  before_action :find_post, only: [:edit, :show, :update, :destroy, :like, :add_to_collection]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update,:destroy]
 
   def index
@@ -46,7 +46,7 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     redirect_to root_path
-    flash[:danger] = I18n.t("controllers.posts.destroy")
+    flash[:alert] = I18n.t("controllers.posts.destroy")
   end
 
   def like
@@ -60,7 +60,6 @@ class PostsController < ApplicationController
   end
 
   def add_to_collection
-    @post = Post.find(params[:id])
     unless my_collection.posts.include?(@post)
       my_collection.add_post_to_collection(@post)   
       flash[:notice] = I18n.t("controllers.posts.add_to_collection.success")
@@ -87,7 +86,7 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :description, :image, :category_id, 
-      tools_attributes: [:id, :name, :_destroy],
-      steps_attributes: [:id, :description, :_destroy] )
+                                  tools_attributes: [:id, :name, :_destroy],
+                                  steps_attributes: [:id, :description, :_destroy] )
   end
 end
