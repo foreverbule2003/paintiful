@@ -20,21 +20,16 @@ RSpec.describe Post, type: :model do
     expect(empty_title).not_to be_valid
   end
 
-  it 'belongs_to category'do
-    category = Category.create(name: "test_category")
-    post = category.posts.build(title: "post")
-    expect(category.posts).to include(post)
-  end
-
-  it 'belongs_to user' do 
-    user = User.create(id: 1)
-    post = user.posts.build(title: "user build it")
-    expect(user.posts).to include(post)
-  end
-
-  it '#do_like' do 
-    expect{@post.do_like}.to change{@post.like}.by(1)
-  end
+  it { should belong_to :category}
+  it { should belong_to :user }
+  it { should have_many :post_collections}
+  it { should have_many :tools}
+  it { should have_many :steps}
+  it { should accept_nested_attributes_for :tools}
+  it { should accept_nested_attributes_for :steps}
+  it { should validate_presence_of :title}
+  it { should validate_length_of(:title).is_at_most(140) }
+  it { should validate_length_of(:description).is_at_most(140) }
 
   it '#do_view' do 
     expect{@post.do_view}.to change{@post.counter}.by(1)
